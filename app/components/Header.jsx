@@ -56,7 +56,7 @@ export default function Header() {
     <header className="absolute sm:relative top-0 left-0 z-50 w-full bg-transparent">
      
       {/* Top blue header */}
-      <div className="bg-transparent md:bg-gradient-to-r md:from-[#2e83a4] md:via-[#285b91] md:to-[#243c82] text-white">
+      <div className="bg-transparent md:bg-gradient-to-r md:from-[#D99024] md:via-[#B96B25] md:to-[#82451F] text-white">
          
         <div className="mx-auto flex min-h-[85px] sm:min-h-[122px] max-w-[1320px] items-center justify-between gap-6 px-5 py-3 lg:px-8">
           
@@ -126,7 +126,7 @@ export default function Header() {
       </div>
 
       {/* Bottom navigation */}
-      <div className="bg-[#f3eee8] shadow-[0_6px_12px_rgba(0,0,0,0.15)]">
+      <div className="bg-[#FFF8ED] shadow-[0_6px_12px_rgba(0,0,0,0.12)]">
         <div className="hidden sm:flex mx-auto flex min-h-[56px] max-w-[1320px] items-center justify-between px-5 lg:px-8">
           {/* Desktop navigation */}
           <nav
@@ -140,10 +140,10 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-1.5 whitespace-nowrap text-[16px] transition-colors hover:text-[#2d83a5] ${
+                  className={`flex items-center gap-1.5 whitespace-nowrap text-[16px] font-bold transition-colors hover:text-[#B96B25] ${
                     index === 0
-                      ? "font-medium text-[#2d83a5]"
-                      : "text-[#484848]"
+                      ? "font-bold text-[#B96B25]"
+                      : "text-[#4B4037]"
                   }`}
                 >
                   {item.label}
@@ -184,10 +184,10 @@ export default function Header() {
   {/* Email Block */}
   <li className="secondary flex items-center">
     <a 
-      className="flex items-center gap-2 text-[16px] text-[#484848] transition hover:text-[#2c83a5]" 
+      className="flex font-bold items-center gap-2 text-[16px] text-[#4B4037] transition hover:text-[#B96B25]" 
       href="mailto:info@ashram.com"
     >
-      <span className="flex items-center text-[16px] text-[#484848]"><MdEmail /></span>  
+      <span className="flex items-center text-[16px] text-[#4B4037] hover:text-[#B96B25]"><MdEmail /></span>  
       info@ashram.com
     </a>
   </li>
@@ -195,17 +195,17 @@ export default function Header() {
   {/* Phone Block */}
   <li className="secondary flex items-center">
     <a 
-      className="flex items-center gap-2 telnav text-[16px] text-[#484848] transition hover:text-[#2c83a5]" 
+      className="font-bold flex items-center gap-2 telnav text-[16px] text-[#4B4037] transition hover:text-[#B96B25]" 
       href="tel:+911244666166"
     >
-      <span className="flex items-center text-[16px] text-[#484848] hover:text-[#2c83a5]"><FaPhone /></span>
+      <span className="flex items-center text-[16px] text-[#4B4037] hover:text-[#B96B25]"><FaPhone /></span>
       +91 124 4666166
     </a>
   </li>
   <li>
     <a 
-      className="inline-flex min-h-[38px] items-center gap-2 rounded-full bg-[#2c83a5] px-8 text-[16px] font-bold uppercase text-white transition hover:bg-[#216a88]" 
-      href="#"
+      className="inline-flex min-h-[38px] items-center gap-2 rounded-full bg-[#B96B25] px-8 text-[16px] font-bold uppercase text-white transition hover:bg-[#82451F]" 
+      href="/accommodation"
     >
       Book Now
     </a>
@@ -262,7 +262,7 @@ export default function Header() {
                         key={child.href + child.label}
                         href={child.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block py-2.5 text-sm text-gray-600 hover:text-[#2d83a5]"
+                        className="block gap-1.5 whitespace-nowrap text-[16px] font-bold transition-colors hover:text-[#B96B25] text-[#4B4037]"
                       >
                         {child.label}
                       </Link>
@@ -311,7 +311,7 @@ export default function Header() {
         <Link
           key={item.href}
           href={item.href}
-          className="whitespace-nowrap text-[15px] font-medium text-[#484848] transition-colors duration-300 hover:text-[#2c83a5]"
+          className="flex items-center gap-1.5 whitespace-nowrap text-[16px] font-bold transition-colors hover:text-[#B96B25] text-[#4B4037]"
         >
           {item.label.trim()}
         </Link>
@@ -324,7 +324,7 @@ export default function Header() {
     <button
       type="button"
       onClick={() => setStickyMobileOpen(!stickyMobileOpen)}
-      className="rounded-lg p-2 text-[#285b91] transition hover:bg-gray-100 lg:hidden"
+      className="rounded-lg p-2 text-[#A84E2E] transition hover:bg-gray-100 lg:hidden"
       aria-label={stickyMobileOpen ? "Close menu" : "Open menu"}
       aria-expanded={stickyMobileOpen}
     >
@@ -349,7 +349,7 @@ export default function Header() {
           key={item.href}
           href={item.href}
           onClick={() => setStickyMobileOpen(false)}
-          className="block border-b border-gray-100 py-3.5 text-sm font-medium text-[#484848] transition hover:pl-2 hover:text-[#2c83a5]"
+          className="block border-b border-gray-100 py-3.5 text-sm font-medium text-[#484848] transition hover:pl-2 hover:text-[#B96B25]"
         >
           {item.label.trim()}
         </Link>

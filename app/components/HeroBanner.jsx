@@ -140,7 +140,7 @@ export default function HeroBanner() {
 
       {/* Animated Headline */}
       <div className="min-h-[100px] sm:min-h-[180px]">
-        <h2 className="text-4xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-[66px]">
+        <h2 className="text-4xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-[56px]">
 
           <span className="block text-white">
             Book A Room

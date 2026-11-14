@@ -84,7 +84,7 @@ export default function ContactPage() {
 
       {/* ================= HERO BANNER ================= */}
 
-      <section className="pt-[28px] sm:pt-0 relative flex min-h-[350px] items-center overflow-hidden md:min-h-[440px]">
+      <section className="pt-[90px] sm:pt-0 relative flex min-h-[410px] items-center overflow-hidden md:min-h-[440px]">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[7000ms] hover:scale-105"
           style={{
@@ -96,21 +96,21 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[#102B58]/75" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#102B58]/90 via-[#102B58]/50 to-transparent" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-5 py-20 md:px-10">
+        <div className="relative mx-auto relative w-full max-w-[1320px] item-center px-5 sm:px-6 lg:px-8">
           <div data-aos="fade-up" className="max-w-2xl">
 
-            <div className="mb-5 flex items-center gap-3">
+            <div className="mb-3 md:mb-5 flex items-center gap-3">
               <span className="h-[2px] w-12 bg-[#FFB900]" />
               <span className="text-xs font-bold uppercase tracking-[4px] text-[#FFCA45]">
                 Shree Krishna Bhakti Ashram
               </span>
             </div>
 
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
+            <h1 className="text-4xl font-bold leading-tight text-white md:text-[46px]">
               Get In <span className="text-[#FFB900]">Touch</span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-8 text-white/85 md:text-lg">
+            <p className="mt-3 md:mt-5 max-w-xl text-base leading-8 text-white/85 md:text-lg">
                We are here to help you plan your stay, answer your
               questions, and make your experience at our Ashram
               comfortable and memorable.
@@ -160,7 +160,7 @@ export default function ContactPage() {
                 </span>
               </div>
 
-              <h2 className="font-serif text-4xl font-light uppercase leading-tight tracking-wide text-[#16222f] sm:text-5xl lg:text-6xl">
+              <h2 className="font-serif text-4xl font-light uppercase leading-tight tracking-wide text-[#16222f] sm:text-5xl lg:text-[46px]">
                 You Have Questions,
                 <span className="block text-[#fdbb00]">
                   We Have Answers

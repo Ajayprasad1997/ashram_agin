@@ -85,9 +85,9 @@ export default function Footer() {
               <Image
                 src="/assets/images/ashram-logo.png"
                 alt="Shree Krishna Bhakti Ashram"
-                width={220}
-                height={110}
-                className="h-auto w-[190px] object-contain"
+                width={120}
+                height={80}
+                className="h-auto w-[100px] object-contain"
               />
             </Link>
 

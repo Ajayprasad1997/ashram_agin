@@ -69,7 +69,7 @@ const roomCategories = [
   },
   {
     id: "deluxe-direct",
-    label: "Deluxe Rooms — Direct Booking",
+    label: "Deluxe Rooms",
     description:
       "Explore our Deluxe Rooms and enquire directly with the ashram. These rooms are not listed on external booking websites.",
     rooms: [
@@ -146,7 +146,7 @@ const roomCategories = [
   },
   {
     id: "deluxe-online",
-    label: "Deluxe Rooms — Booking Sites",
+    label: "Premium Room",
     description:
       "Discover Deluxe Room options listed on external booking platforms. Check each listing for current prices and availability.",
     rooms: [

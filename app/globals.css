@@ -150,3 +150,16 @@ body {
     width: 99px;
   }
 }
+
+.review-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.review-scroll::-webkit-scrollbar-thumb {
+  background: #B96B25;
+  border-radius: 10px;
+}
+
+.review-scroll::-webkit-scrollbar-track {
+  background: #FFF0DC;
+}

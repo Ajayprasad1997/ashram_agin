@@ -229,15 +229,15 @@ export default function Testimonials() {
 
               <span className="text-[13px] font-bold uppercase tracking-[3px] text-[#244584]" data-aos="fade-up"
               data-aos-delay="100">
-                What Guests Say
+                What Our Guests Say
               </span>
             </div>
 
             <h2 className="text-3xl font-bold leading-tight text-[#244584] sm:text-4xl md:text-5xl" data-aos="fade-up"
               data-aos-delay="100">
-              Our Best
+              Guest
               <span className="block text-[#fdbb00]">
-                Guest Feedback
+                 Feedback
               </span>
             </h2>
           </div>
@@ -455,7 +455,7 @@ export default function Testimonials() {
 
                   {/* Review card */}
                   <div
-                    className={`relative min-h-[255px] rounded-[22px] border bg-white p-5 sm:p-6 ${
+                    className={`relative min-h-[255px] rounded-[22px] border bg-[#FFF8ED] shadow-[0_6px_12px_rgba(0,0,0,0.12)] p-5 sm:p-6 ${
                       isCenter
                         ? "border-2 border-[#fdbb00]"
                         : "border border-[#244584]/15"
@@ -510,7 +510,7 @@ export default function Testimonials() {
                         “
                       </span>
 
-                      <p className="line-clamp-3 pl-1 pt-3 text-sm leading-7 text-black-600">
+                      <p className="line-clamp-3 pl-1 pt-3 text-sm leading-7 text-[#B96B25]">
                         {review.review}
                       </p>
                     </div>
@@ -634,7 +634,7 @@ export default function Testimonials() {
 
             <div className="mb-5 h-[2px] w-full bg-[#244584]/10" />
 
-            <p className="text-sm leading-8 text-gray-600">
+            <p className="max-h-[120px] overflow-y-auto pr-2 text-sm leading-8 text-[#B96B25]">
               {selectedReview.review}
             </p>
 

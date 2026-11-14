@@ -16,6 +16,13 @@ import {
   ArrowUpRight,
   BedDouble,
   CheckCircle2,
+  Bath,
+  Snowflake,
+  Utensils,
+  Refrigerator,
+  DoorOpen,
+  Armchair,
+  Building2,
 } from "lucide-react";
 
 /* ================= ROOM DATA ================= */
@@ -26,7 +33,16 @@ const roomSections = [
     title: "Super Deluxe Rooms",
     subtitle: "PREMIUM ACCOMMODATION",
     description:
-      "Experience premium comfort and elegance in our Super Deluxe Rooms. Thoughtfully designed interiors, spacious accommodation and beautiful surroundings create a peaceful and relaxing stay in Vrindavan.",
+      "Enjoy a more spacious and comfortable stay in our Super Deluxe Rooms at Shree Krishna Bhakti Ashram, Vrindavan. Featuring thoughtfully arranged interiors, bedroom spaces, a kitchen area and a peaceful room outlook, these rooms are designed for guests seeking extra comfort during their spiritual visit.",
+
+    facilities: [
+      { icon: BedDouble, name: "Spacious Bedroom" },
+      { icon: Utensils, name: "Kitchen Area" },
+      { icon: Bath, name: "Bathroom" },
+      { icon: Building2, name: "Comfortable Room Interior" },
+      { icon: DoorOpen, name: "Peaceful Room Outlook" },
+    ],
+
     images: [
       {
         src: "assets/images/sd/1.jpg",
@@ -35,127 +51,142 @@ const roomSections = [
       },
       {
         src: "assets/images/sd/2.jpg",
-        alt: "Premium room interior",
-         caption: "kitchen Room",
+        alt: "Super deluxe kitchen room",
+        caption: "Kitchen Room",
       },
       {
         src: "assets/images/sd/3.jpg",
-        alt: "Elegant room design",
-         caption: "Double Bedroom",
+        alt: "Super deluxe double bedroom",
+        caption: "Double Bedroom",
       },
       {
         src: "assets/images/sd/4.jpg",
-        alt: "Luxury bedroom interior",
-         caption: "Double Bedroom",
+        alt: "Super deluxe bedroom interior",
+        caption: "Double Bedroom",
       },
       {
         src: "assets/images/sd/5.jpg",
-        alt: "Luxury bedroom interior",
-         caption: "Bathroom",
+        alt: "Super deluxe bathroom",
+        caption: "Bathroom",
       },
       {
         src: "assets/images/sd/6.jpg",
-        alt: "Luxury bedroom interior",
-         caption: "Room Outlook",
+        alt: "Super deluxe room outlook",
+        caption: "Room Outlook",
       },
     ],
   },
+
   {
     id: "direct-booking",
     title: "Deluxe Rooms",
     subtitle: "DIRECT BOOKING",
     description:
-      "Discover our comfortable Deluxe Rooms with a perfect blend of simplicity and modern amenities. Book directly with us for a convenient and personalized experience during your stay.",
+      "Our Deluxe Rooms offer a welcoming and relaxing stay in Vrindavan, with comfortable single and double bedroom options. Explore the available room interiors and bathrooms, and contact us directly for booking assistance and a personalized stay experience.",
+
+    facilities: [
+      { icon: BedDouble, name: "Single & Double Bedroom Options" },
+      { icon: Bath, name: "Bathroom" },
+      { icon: Building2, name: "Comfortable Room Interiors" },
+    ],
+
     images: [
       {
         src: "assets/images/db/1.jpg",
-        alt: "Deluxe room",  
-         caption: "Deluxe Rooms",
+        alt: "Deluxe room",
+        caption: "Deluxe Rooms",
       },
       {
         src: "assets/images/db/2.jpg",
-        alt: "Deluxe bedroom",
-         caption: "Single Bedroom",
-      },   
-      
+        alt: "Deluxe single bedroom",
+        caption: "Single Bedroom",
+      },
       {
         src: "assets/images/db/4.jpg",
-        alt: "Deluxe bedroom interior",
-         caption: "Single Bedroom",
+        alt: "Deluxe single bedroom interior",
+        caption: "Single Bedroom",
       },
-       {
+      {
         src: "assets/images/db/5.jpg",
-        alt: "Deluxe bedroom interior",
-         caption: "Double Bedroom",
+        alt: "Deluxe double bedroom",
+        caption: "Double Bedroom",
       },
-       {
+      {
         src: "assets/images/db/6.jpg",
-        alt: "Deluxe bedroom interior",
-         caption: "Double Bedroom",
+        alt: "Deluxe double bedroom interior",
+        caption: "Double Bedroom",
       },
-       {
+      {
         src: "assets/images/db/7.jpg",
-        alt: "Deluxe bedroom interior",
-         caption: "Double Bedroom",
+        alt: "Deluxe double bedroom",
+        caption: "Double Bedroom",
       },
-       {
+      {
         src: "assets/images/db/8.jpg",
-        alt: "Deluxe bedroom interior",
-         caption: "Double Bedroom",
+        alt: "Deluxe double bedroom interior",
+        caption: "Double Bedroom",
       },
-       {
+      {
         src: "assets/images/db/9.jpg",
-        alt: "Deluxe bedroom interior",
-         caption: "Double Bedroom",
+        alt: "Deluxe double bedroom",
+        caption: "Double Bedroom",
       },
-       {
+      {
         src: "assets/images/db/10.jpg",
-        alt: "Deluxe bedroom interior",
-         caption: "Single Bedroom",
+        alt: "Deluxe single bedroom",
+        caption: "Single Bedroom",
       },
-       {
+      {
         src: "assets/images/db/11.jpg",
-        alt: "Deluxe bedroom interior",
-         caption: "Bathroom",
+        alt: "Deluxe bathroom",
+        caption: "Bathroom",
       },
-       {
+      {
         src: "assets/images/db/12.jpg",
-        alt: "Deluxe bedroom interior",
-         caption: "Bathroom ",
+        alt: "Deluxe bathroom interior",
+        caption: "Bathroom",
       },
     ],
   },
+
   {
     id: "booking-sites",
-    title: "Deluxe Rooms",
+    title: "Premium Room",
     subtitle: "AVAILABLE ON BOOKING PLATFORMS",
     description:
-      "Explore our Deluxe Room options available through popular booking platforms. Enjoy a peaceful atmosphere, comfortable accommodation and a memorable stay at Shree Krishna Bhakti Ashram.",
+      "Discover our Premium Room options available through selected booking platforms. Enjoy a peaceful atmosphere, thoughtfully arranged interiors and comfortable bedroom spaces at Shree Krishna Bhakti Ashram. Choose a suitable booking option for your visit to Vrindavan.",
+
+    facilities: [
+      { icon: BedDouble, name: "Comfortable Bedroom" },
+      { icon: Armchair, name: "Seating Area" },
+      { icon: Building2, name: "Room Interiors" },
+    ],
+
     images: [
       {
-        src: "assets/images/dr/1.jpg",
-        alt: "Booking site deluxe room",
-         caption: "Deluxe Rooms",
-      },
-      {
-        src: "assets/images/dr/2.jpg",
-        alt: "Room details",
-         caption: "Comfortable Seating Area",
-      },
-      {
-        src: "assets/images/dr/3.jpg",
-        alt: "Bedroom interior",
-         caption: "Room Facilities",
-      },
-      {
         src: "assets/images/dr/4.jpg",
-        alt: "Room view",
-         caption: "Double Bedroom",
+        alt: "Premium room",
+        caption: "Premium Room",
       },
       {
         src: "assets/images/dr/5.jpg",
-        alt: "Room view",
-         caption: "Room Interior",
+        alt: "Premium room interior",
+        caption: "Room Interior",
+      },
+      {
+        src: "assets/images/dr/2.jpg",
+        alt: "Premium room seating area",
+        caption: "Comfortable Seating Area",
+      },
+      {
+        src: "assets/images/dr/3.jpg",
+        alt: "Premium room facilities",
+        caption: "Room Facilities",
+      },
+      {
+        src: "assets/images/dr/1.jpg",
+        alt: "Premium double bedroom",
+        caption: "Double Bedroom",
       },
     ],
   },
@@ -165,8 +196,8 @@ const roomSections = [
 
 const tabs = [
   { id: "super-deluxe", label: "Super Deluxe Rooms" },
-  { id: "direct-booking", label: "Deluxe Rooms — Direct Booking" },
-  { id: "booking-sites", label: "Deluxe Rooms — Booking Sites" },
+  { id: "direct-booking", label: "Deluxe Rooms" },
+  { id: "booking-sites", label: "Premium Room" },
 ];
 
 /* ================= FACILITIES ================= */
@@ -354,22 +385,22 @@ useEffect(() => {
 
       {/* ================= PAGE BANNER ================= */}
 
-      <section className="pt-[28px] sm:pt-0 relative flex min-h-[350px] items-center overflow-hidden md:min-h-[460px]">
+      <section className="pt-[90px] sm:pt-0 relative flex min-h-[410px] items-center overflow-hidden md:min-h-[460px]">
 
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[7000ms] hover:scale-105"
           style={{
-            backgroundImage: "url('/assets/images/abgh.jpg')",
+            backgroundImage: "url('/assets/images/banner_premium.jpg')",
           }}
         />
 
         <div className="absolute inset-0 bg-[#244584]/80" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-5 py-20 md:px-10">
+        <div className="relative mx-auto relative w-full max-w-[1320px] item-center px-5 sm:px-6 lg:px-8">
 
           <div data-aos="fade-up" className="max-w-2xl">
 
-            <div className="mb-5 flex items-center gap-3">
+            <div className="mb-3 md:mb-5 flex items-center gap-3">
               <span className="h-[2px] w-12 bg-[#fdbb00]" />
 
               <span className="text-xs font-bold uppercase tracking-[4px] text-[#fdbb00]">
@@ -377,11 +408,11 @@ useEffect(() => {
               </span>
             </div>
 
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
+            <h1 className="text-4xl font-bold leading-tight text-white md:text-[46px]">
               Accommodation
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-8 text-white/90 md:text-lg">
+            <p className="mt-3 md:mt-5 max-w-xl text-base leading-8 text-white/90 md:text-lg">
               Experience peace, comfort and spiritual
               hospitality at Shree Krishna Bhakti Ashram.
               Discover thoughtfully designed rooms for
@@ -467,158 +498,216 @@ useEffect(() => {
 
       </nav>
 
-      {/* ================= ROOM GALLERY SECTIONS ================= */}
+     {/* ================= ROOM GALLERY SECTIONS ================= */}
 
-      <div className="mx-auto max-w-[1250px] px-5 pb-10 sm:px-8 lg:px-10">
+<div className="mx-auto max-w-[1250px] px-5 pb-10 sm:px-8 lg:px-10">
 
-        {roomSections.map((section, sectionIndex) => (
+  {roomSections.map((section, sectionIndex) => (
 
-          <section
-            key={section.id}
-            id={section.id}
-            className="scroll-mt-28 border-b border-[#244584]/10 py-14 sm:py-20"
+    <section
+      key={section.id}
+      id={section.id}
+      className="scroll-mt-28 border-b border-[#244584]/10 py-14 sm:py-20"
+    >
+
+      {/* FEATURED CONTENT */}
+
+      <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,2.1fr)] md:gap-8">
+
+        {/* LEFT CONTENT */}
+
+        <div data-aos="fade-right" className="max-w-md">
+
+          {/* SUBTITLE */}
+
+          <span className="mb-3 inline-block text-[14px] font-bold uppercase tracking-[3px] text-[#244584]">
+            <span className="mr-2 text-[#fdbb00]">●</span>
+            {section.subtitle}
+          </span>
+
+          {/* TITLE */}
+
+          <h2 className="text-3xl font-bold leading-tight text-[#244584] sm:text-4xl lg:text-[36px]">
+            {section.title}
+          </h2>
+
+          {/* DESCRIPTION */}
+
+          <p className="mt-4 text-[13px] leading-[1.9] text-gray-600">
+            {section.description}
+          </p>
+
+          {/* ROOM FACILITIES */}
+
+          <div className="mt-6">
+
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#244584]">
+              Room Facilities & Amenities
+            </h3>
+
+            <div className="grid grid-cols-2 gap-x-3 gap-y-4">
+
+              {section.facilities.map((facility, index) => {
+                const Icon = facility.icon;
+
+                return (
+                  <div
+                    key={`${section.id}-facility-${index}`}
+                    className="flex items-start gap-2.5"
+                  >
+
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#fdbb00]/15">
+
+                      <Icon
+                        size={17}
+                        strokeWidth={1.8}
+                        className="text-[#244584]"
+                      />
+
+                    </div>
+
+                    <span className="pt-1 text-[12px] font-medium leading-relaxed text-gray-700">
+                      {facility.name}
+                    </span>
+
+                  </div>
+                );
+              })}
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* FEATURED IMAGE */}
+
+        <button
+          type="button"
+          data-aos="fade-left"
+          onClick={() => openLightbox(sectionIndex, 0)}
+          aria-label={`Open ${section.title} gallery`}
+          className="group relative h-[260px] cursor-pointer overflow-hidden rounded-[18px] bg-gray-100 text-left sm:h-[360px] lg:h-[390px]"
+        >
+
+          <img
+            src={section.images[0].src}
+            alt={section.images[0].alt}
+            loading={sectionIndex === 0 ? "eager" : "lazy"}
+            className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+          />
+
+          {/* IMAGE OVERLAY */}
+
+          <div className="absolute inset-0 bg-[#244584]/0 transition duration-500 group-hover:bg-[#244584]/20" />
+
+          {/* HOVER CAPTION */}
+
+          <div className="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-between bg-[#244584] px-5 py-4 transition-transform duration-500 ease-out group-hover:translate-y-0">
+
+            <div className="flex items-center gap-3">
+
+              <span className="h-7 w-1 rounded-full bg-[#fdbb00]" />
+
+              <span className="text-sm font-bold text-white sm:text-base">
+                {section.images[0].caption}
+              </span>
+
+            </div>
+
+            <Maximize2
+              size={18}
+              className="shrink-0 text-[#fdbb00]"
+            />
+
+          </div>
+
+        </button>
+
+      </div>
+
+      {/* IMAGE GRID */}
+
+      <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+
+        {section.images.slice(1).map((image, imageIndex) => (
+
+          <button
+            type="button"
+            key={`${section.id}-${imageIndex}`}
+            data-aos="fade-up"
+            data-aos-delay={imageIndex * 100}
+            onClick={() =>
+              openLightbox(sectionIndex, imageIndex + 1)
+            }
+            aria-label={`View ${image.alt}`}
+            className="group relative h-[180px] cursor-pointer overflow-hidden rounded-[16px] bg-gray-100 text-left sm:h-[210px] lg:h-[250px]"
           >
 
-            {/* FEATURED CONTENT */}
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+            />
 
-            <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,2.1fr)] md:gap-8">
+            {/* IMAGE OVERLAY */}
 
-              {/* LEFT CONTENT */}
+            <div className="absolute inset-0 bg-[#244584]/0 transition duration-300 group-hover:bg-[#244584]/20" />
 
-              <div data-aos="fade-right" className="max-w-md">
+            {/* HOVER CAPTION */}
 
-                <span className="mb-3 inline-block text-[14px] font-bold uppercase tracking-[3px] text-[#244584]">
-                  <span className="mr-2 text-[#fdbb00]">●</span>
-                  {section.subtitle}
+            <div className="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-between bg-[#244584] px-3 py-3 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:px-4 sm:py-4">
+
+              <div className="flex min-w-0 items-center gap-2">
+
+                <span className="h-6 w-1 shrink-0 rounded-full bg-[#fdbb00]" />
+
+                <span className="truncate text-xs font-bold text-white sm:text-sm">
+                  {image.caption}
                 </span>
-
-                <h2 className="text-3xl font-bold leading-tight text-[#244584] sm:text-4xl lg:text-[42px]">
-                  {section.title}
-                </h2>
-
-                <p className="mt-4 text-[13px] leading-[1.9] text-gray-600">
-                  {section.description}
-                </p>
-
-               
-
-                <div className="mt-5 flex flex-wrap gap-3">
-
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#244584] bg-[#244584] px-6 py-3 text-[13px] font-bold text-white transition duration-300 hover:border-[#fdbb00] hover:bg-[#fdbb00] hover:text-[#244584]"
-                  >
-                    Book Your Room
-                    <ArrowUpRight size={15} />
-                  </a>
-
-                  <button
-                    type="button"
-                    onClick={() => openLightbox(sectionIndex, 0)}
-                    className="rounded-full border border-[#244584] px-5 py-3 text-[13px] font-bold text-[#244584] transition duration-300 hover:border-[#fdbb00] hover:bg-[#fdbb00]"
-                  >
-                    View Gallery
-                  </button>
-
-                </div>
 
               </div>
 
-              {/* FEATURED IMAGE */}
-
-              <button
-                type="button"
-                data-aos="fade-left"
-                onClick={() => openLightbox(sectionIndex, 0)}
-                aria-label={`Open ${section.title} gallery`}
-                className="group relative h-[260px] cursor-pointer overflow-hidden rounded-[18px] bg-gray-100 text-left sm:h-[360px] lg:h-[390px]"
-              >
-
-                              <img
-                  src={section.images[0].src}
-                  alt={section.images[0].alt}
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                />
-
-                <div className="absolute inset-0 bg-[#244584]/0 transition duration-500 group-hover:bg-[#244584]/20" />
-
-                {/* HOVER CAPTION */}
-
-                <div className="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-between bg-[#244584] px-5 py-4 transition-transform duration-500 ease-out group-hover:translate-y-0">
-
-                  <div className="flex items-center gap-3">
-                    <span className="h-7 w-1 rounded-full bg-[#fdbb00]" />
-
-                    <span className="text-sm font-bold text-white sm:text-base">
-                      {section.images[0].caption}
-                    </span>
-                  </div>
-
-                  <Maximize2 size={18} className="shrink-0 text-[#fdbb00]" />
-
-                </div>
-
-              </button>
-
-            </div>
-
-            {/* IMAGE GRID */}
-
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-
-              {section.images.slice(1).map((image, imageIndex) => (
-
-                <button
-                  type="button"
-                  key={`${section.id}-${imageIndex}`}
-                  data-aos="fade-up"
-                  data-aos-delay={imageIndex * 100}
-                  onClick={() =>
-                    openLightbox(sectionIndex, imageIndex + 1)
-                  }
-                  aria-label={`View ${image.alt}`}
-                  className="group relative h-[180px] cursor-pointer overflow-hidden rounded-[16px] bg-gray-100 text-left sm:h-[210px] lg:h-[250px]"
-                >
-
-                  <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+              <Maximize2
+                size={15}
+                className="ml-2 shrink-0 text-[#fdbb00]"
               />
 
-              <div className="absolute inset-0 bg-[#244584]/0 transition duration-300 group-hover:bg-[#244584]/20" />
-
-              {/* HOVER CAPTION */}
-
-              <div className="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-between bg-[#244584] px-3 py-3 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:px-4 sm:py-4">
-
-                <div className="flex min-w-0 items-center gap-2">
-                  <span className="h-6 w-1 shrink-0 rounded-full bg-[#fdbb00]" />
-
-                  <span className="truncate text-xs font-bold text-white sm:text-sm">
-                    {image.caption}
-                  </span>
-                </div>
-
-                <Maximize2
-                  size={15}
-                  className="ml-2 shrink-0 text-[#fdbb00]"
-                />
-
-             </div>
-
-                </button>
-
-              ))}
-
             </div>
 
-          </section>
+          </button>
 
         ))}
 
       </div>
+      {/* ACTION BUTTONS */}
+
+          <div className="mt-7 flex flex-wrap gap-3">
+
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full border border-[#244584] bg-[#244584] px-6 py-3 text-[13px] font-bold text-white transition duration-300 hover:border-[#fdbb00] hover:bg-[#fdbb00] hover:text-[#244584]"
+            >
+              Book Your Room
+              <ArrowUpRight size={15} />
+            </a>
+
+            <button
+              type="button"
+              onClick={() => openLightbox(sectionIndex, 0)}
+              className="rounded-full border border-[#244584] px-5 py-3 text-[13px] font-bold text-[#244584] transition duration-300 hover:border-[#fdbb00] hover:bg-[#fdbb00]"
+            >
+              View Gallery
+            </button>
+
+          </div>
+
+    </section>
+
+  ))}
+
+</div>
 
       {/* ================= LIGHTBOX MODAL ================= */}
 
@@ -710,7 +799,7 @@ useEffect(() => {
               <span className="text-[#fdbb00]">●</span> Comfort & Convenience
             </span>
 
-            <h2 className="text-3xl font-bold uppercase leading-tight tracking-tight text-[#244584] sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold uppercase leading-tight tracking-tight text-[#244584] sm:text-4xl lg:text-[46px]">
               Facilities and
               <span className="block text-[#fdbb00]">
                 Accommodation
@@ -764,7 +853,7 @@ useEffect(() => {
             Plan Your Stay
           </span>
 
-          <h2 className="mt-5 text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h2 className="mt-5 text-3xl font-bold sm:text-4xl md:text-[46px]">
             Experience Peace & Comfort
           </h2>
 

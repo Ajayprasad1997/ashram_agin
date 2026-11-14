@@ -14,6 +14,12 @@ import {
   CalendarDays,
   HandHeart,
   Sparkles,
+  Building2,
+  Trees,
+  BedDouble,
+  CookingPot,
+  Users,
+  Utensils,
 } from "lucide-react";
 
 import ContactSection from "@/app/components/ContactSection";
@@ -92,7 +98,7 @@ export default function EventsPage() {
     <main className="overflow-hidden bg-[#F5F7FB] text-[#14233F]">
 
       {/* HERO BANNER */}
-      <section className="pt-[28px] sm:pt-0 relative flex min-h-[380px] items-center overflow-hidden md:min-h-[480px]">
+      <section className="pt-[90px] sm:pt-0 relative flex min-h-[410px] items-center overflow-hidden md:min-h-[480px]">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[7000ms] hover:scale-105"
           style={{
@@ -104,20 +110,20 @@ export default function EventsPage() {
         <div className="absolute inset-0 bg-[#102B58]/75" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#102B58]/90 via-[#102B58]/55 to-transparent" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-5 py-20 md:px-10">
+        <div className="mx-auto relative w-full max-w-[1320px] item-center px-5 sm:px-6 lg:px-8">
           <div data-aos="fade-up" className="max-w-2xl">
-            <div className="mb-5 flex items-center gap-3">
+            <div className="md:mb-5 flex items-center gap-3">
               <span className="h-[2px] w-12 bg-[#FFB900]" />
               <span className="text-xs font-bold uppercase tracking-[4px] text-[#FFCA45]">
                 Shree Krishna Bhakti Ashram
               </span>
             </div>
 
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
+            <h1 className="text-4xl font-bold leading-tight text-white md:text-[46px]">
               Events & <span className="text-[#FFB900]">Activities</span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-8 text-white/85 md:text-lg">
+            <p className="mt-3 md:mt-5 max-w-xl text-base leading-8 text-white/85 md:text-lg">
               Experience devotion, discover inner peace, and become a part
               of the spiritual life at our Ashram.
             </p>
@@ -149,7 +155,7 @@ export default function EventsPage() {
               </span>
             </div>
 
-            <h2 className="text-3xl font-bold leading-tight text-[#14233F] md:text-5xl">
+            <h2 className="text-3xl font-bold leading-tight text-[#14233F] md:text-[46px]">
               A Day Filled With
               <span className="block text-[#244584]">
                 Peace & Devotion
@@ -187,17 +193,368 @@ export default function EventsPage() {
               className="relative z-10 h-[330px] w-full rounded-[28px] object-cover shadow-xl md:h-[440px]"
             />
 
-            {/* <div className="absolute -bottom-6 -left-4 z-20 rounded-2xl bg-[#244584] px-6 py-5 text-white shadow-xl md:-left-8">
-              <Sparkles className="mb-2 text-[#FFB900]" size={24} />
-              <p className="text-lg font-bold">Peaceful Living</p>
-              <p className="mt-1 text-xs text-white/75">
-                A spiritual experience
-              </p>
-            </div> */}
+           
           </div>
 
         </div>
       </section>
+      {/* ================= PAID EVENTS & VENUE HIRE ================= */}
+
+<section className="relative overflow-hidden bg-white px-5 py-20 md:px-10 md:py-24">
+
+  <div className="pointer-events-none absolute -right-32 top-10 h-80 w-80 rounded-full bg-[#FFB900]/10 blur-3xl" />
+  <div className="pointer-events-none absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-[#244584]/10 blur-3xl" />
+
+  <div className="relative mx-auto max-w-7xl">
+
+    {/* SECTION HEADING */}
+
+    <div className="mx-auto mb-14 max-w-3xl text-center" data-aos="fade-up">
+
+      <div className="mb-4 flex items-center justify-center gap-3">
+        <span className="h-[2px] w-10 bg-[#FFB900]" />
+        <span className="text-xs font-bold uppercase tracking-[3px] text-[#244584]">
+          Host Your Special Occasion
+        </span>
+        <span className="h-[2px] w-10 bg-[#FFB900]" />
+      </div>
+
+          <h2 className="text-3xl font-bold leading-tight text-[#14233F] md:text-[46px]">
+        Events & <span className="text-[#244584]">Venue Hire</span>
+      </h2>
+
+      <p className="mt-6 text-base leading-8 text-[#647084]">
+        Looking for a peaceful and distinctive venue for a wedding,
+        Bhagwat, religious ceremony or family gathering? Shree Krishna
+        Bhakti Ashram offers its temple and garden spaces for private
+        events and paid venue hire. With accommodation and an area for
+        food preparation within the Ashram, we invite you to discuss
+        your event requirements with our team.
+      </p>
+
+    </div>
+
+    {/* VENUE SPACES */}
+
+    <div className="grid gap-7 md:grid-cols-2">
+
+      {/* TEMPLE AREA */}
+
+      <article
+        data-aos="fade-up"
+        className="group overflow-hidden rounded-[26px] border border-[#E8ECF3] bg-[#F5F7FB] p-7 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl md:p-9"
+      >
+
+        <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#FFF4D6] text-[#B77B00] transition-all duration-300 group-hover:bg-[#244584] group-hover:text-white">
+          <Building2 size={30} />
+        </div>
+
+        <span className="text-xs font-bold uppercase tracking-[2px] text-[#B77B00]">
+          Enclosed Event Space
+        </span>
+
+        <h3 className="mt-3 text-2xl font-bold text-[#14233F] md:text-3xl">
+          Temple Area
+        </h3>
+
+        <p className="mt-4 text-sm leading-8 text-[#647084]">
+          The enclosed temple area can be considered for religious
+          ceremonies, Bhagwat programmes, devotional gatherings,
+          weddings and other suitable private occasions. Its spiritual
+          setting provides a distinctive atmosphere for meaningful
+          celebrations and gatherings.
+        </p>
+
+        <div className="mt-6 flex items-center gap-3 border-t border-[#DDE3ED] pt-5">
+          <Sparkles size={19} className="shrink-0 text-[#B77B00]" />
+          <span className="text-sm font-semibold text-[#244584]">
+            Available for event-hire enquiries
+          </span>
+        </div>
+
+      </article>
+
+      {/* OPEN GARDEN AREA */}
+
+      <article
+        data-aos="fade-up"
+        data-aos-delay="120"
+        className="group overflow-hidden rounded-[26px] border border-[#E8ECF3] bg-[#F5F7FB] p-7 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl md:p-9"
+      >
+
+        <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#FFF4D6] text-[#B77B00] transition-all duration-300 group-hover:bg-[#244584] group-hover:text-white">
+          <Trees size={30} />
+        </div>
+
+        <span className="text-xs font-bold uppercase tracking-[2px] text-[#B77B00]">
+          Outdoor Event Space
+        </span>
+
+        <h3 className="mt-3 text-2xl font-bold text-[#14233F] md:text-3xl">
+          Open Garden Area
+        </h3>
+
+        <p className="mt-4 text-sm leading-8 text-[#647084]">
+          The Ashram's open garden area offers an outdoor setting for
+          suitable celebrations, family functions, religious gatherings
+          and social occasions. Clients can enquire about using this
+          space alongside the temple area or for an event arranged
+          primarily in the garden.
+        </p>
+
+        <div className="mt-6 flex items-center gap-3 border-t border-[#DDE3ED] pt-5">
+          <Sparkles size={19} className="shrink-0 text-[#B77B00]" />
+          <span className="text-sm font-semibold text-[#244584]">
+            Available for event-hire enquiries
+          </span>
+        </div>
+
+      </article>
+
+    </div>
+
+    {/* ACCOMMODATION & FOOD ARRANGEMENTS */}
+
+    <div className="mt-8 grid gap-7 lg:grid-cols-2">
+
+      {/* ACCOMMODATION */}
+
+      <article
+        data-aos="fade-right"
+        className="rounded-[26px] bg-[#244584] p-7 text-white shadow-xl md:p-9"
+      >
+
+        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#FFB900] text-[#14233F]">
+          <BedDouble size={28} />
+        </div>
+
+        <span className="text-xs font-bold uppercase tracking-[2px] text-[#FFCA45]">
+          Guest Accommodation
+        </span>
+
+        <h3 className="mt-3 text-2xl font-bold md:text-3xl">
+          Stay at the Ashram
+        </h3>
+
+        <div className="mt-6 flex flex-wrap items-end gap-3">
+          <span className="text-5xl font-bold text-[#FFCA45]">
+            10
+          </span>
+          <span className="pb-1 text-sm font-semibold text-white/80">
+            Rooms available in total
+          </span>
+        </div>
+
+        <p className="mt-5 text-sm leading-8 text-white/80">
+          Accommodation is available for guests attending events at
+          the Ashram. The property has a total of 10 rooms, making
+          it possible for event organisers to enquire about arranging
+          accommodation for family members, visitors and other guests.
+        </p>
+
+        <div className="mt-6 rounded-2xl border border-white/15 bg-white/10 p-5">
+
+          <div className="flex items-center gap-3">
+            <Users size={21} className="shrink-0 text-[#FFCA45]" />
+            <h4 className="font-bold text-white">
+              Guest & Sleeping Capacity
+            </h4>
+          </div>
+
+          <p className="mt-3 text-sm leading-7 text-white/75">
+            The exact sleeping capacity should be confirmed with the
+            Ashram team according to the room arrangements and number
+            of guests. Additional beds may be discussed in advance
+            and are subject to availability and approval.
+          </p>
+
+        </div>
+
+      </article>
+
+      {/* FOOD PREPARATION */}
+
+      <article
+        data-aos="fade-left"
+        className="rounded-[26px] border border-[#E8ECF3] bg-[#F5F7FB] p-7 md:p-9"
+      >
+
+        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#FFF4D6] text-[#B77B00]">
+          <CookingPot size={28} />
+        </div>
+
+        <span className="text-xs font-bold uppercase tracking-[2px] text-[#B77B00]">
+          Food & Catering Arrangements
+        </span>
+
+        <h3 className="mt-3 text-2xl font-bold text-[#14233F] md:text-3xl">
+          Dedicated Food Preparation Area
+        </h3>
+
+        <p className="mt-5 text-sm leading-8 text-[#647084]">
+          The Ashram has a dedicated area where food can be prepared
+          within the premises. This facility can support event-related
+          food arrangements for gatherings, religious programmes,
+          Bhagwat ceremonies, weddings and other suitable occasions.
+        </p>
+
+        <div className="mt-6 space-y-4">
+
+          <div className="flex items-start gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#FFF4D6] text-[#B77B00]">
+              <Utensils size={18} />
+            </div>
+            <div>
+              <h4 className="font-bold text-[#14233F]">
+                On-site Food Preparation
+              </h4>
+              <p className="mt-1 text-sm leading-7 text-[#647084]">
+                Food preparation can be arranged within the Ashram,
+                subject to prior discussion and agreed arrangements.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#FFF4D6] text-[#B77B00]">
+              <Users size={18} />
+            </div>
+            <div>
+              <h4 className="font-bold text-[#14233F]">
+                Event Food Requirements
+              </h4>
+              <p className="mt-1 text-sm leading-7 text-[#647084]">
+                Discuss your expected guest numbers, menu and food
+                service requirements with the Ashram family in advance.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    {/* EVENT TYPES & ADDITIONAL ARRANGEMENTS */}
+
+    <div
+      data-aos="fade-up"
+      className="mt-10 rounded-[28px] border border-[#E8ECF3] bg-white p-7 shadow-sm md:p-10"
+    >
+
+      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+
+        <div>
+          <span className="text-xs font-bold uppercase tracking-[3px] text-[#B77B00]">
+            Plan Your Occasion
+          </span>
+
+          <h3 className="mt-3 text-2xl font-bold leading-tight text-[#14233F] md:text-3xl">
+            A Setting for Meaningful Gatherings
+          </h3>
+
+          <p className="mt-4 text-sm leading-8 text-[#647084]">
+            Whether you are planning a religious celebration or a
+            private family occasion, contact the Ashram to discuss
+            the spaces, accommodation and arrangements that may
+            suit your event.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+
+          {[
+            "Weddings & Family Functions",
+            "Bhagwat & Religious Programmes",
+            "Spiritual & Devotional Gatherings",
+            "Private Celebrations",
+          ].map((item, index) => (
+
+            <div
+              key={index}
+              className="flex items-center gap-3 rounded-xl bg-[#F5F7FB] p-4"
+            >
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#FFF4D6] text-[#B77B00]">
+                <Sparkles size={16} />
+              </span>
+
+              <span className="text-sm font-semibold text-[#244584]">
+                {item}
+              </span>
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+      <div className="mt-8 border-t border-[#E8ECF3] pt-7">
+
+        <h4 className="text-lg font-bold text-[#14233F]">
+          Discuss Your Event Requirements
+        </h4>
+
+        <p className="mt-3 text-sm leading-8 text-[#647084]">
+          Event organisers can discuss venue availability, guest
+          accommodation, additional beds, food preparation, seating,
+          decorations, timings, pricing and any other arrangements
+          with the Ashram family. These requirements will need to be
+          reviewed and agreed upon before confirming a booking.
+        </p>
+
+        <p className="mt-3 text-sm leading-8 text-[#647084]">
+          Venue hire is offered on a paid basis. Charges, availability,
+          permitted arrangements and the final scope of services will
+          be discussed individually according to the nature and
+          requirements of each event.
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* VENUE ENQUIRY CTA */}
+
+    <div
+      data-aos="zoom-in"
+      className="mt-10 rounded-[28px] bg-[#14233F] px-7 py-10 text-center shadow-xl md:px-12 md:py-14"
+    >
+
+      <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#FFB900] text-[#14233F]">
+        <CalendarDays size={30} />
+      </div>
+
+      <span className="text-xs font-bold uppercase tracking-[3px] text-[#FFCA45]">
+        Enquire About Venue Hire
+      </span>
+
+      <h3 className="mt-4 text-2xl font-bold leading-tight text-white md:text-4xl">
+        Planning an Event at the Ashram?
+      </h3>
+
+      <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-white/75 md:text-base">
+        Tell us about your event, expected number of guests,
+        accommodation needs and food arrangements. Our team can
+        discuss the available spaces and possible arrangements
+        with you.
+      </p>
+
+      <Link
+        href="/contact"
+        className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#FFB900] px-8 py-4 text-sm font-bold text-[#14233F] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl"
+      >
+        Enquire About Venue Hire
+        <ArrowUpRight size={19} />
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
+
    {/* FOOD DISTRIBUTION / SEVA */}
       <section className="bg-white px-5 py-20 md:px-10 md:py-24">
         <div className="mx-auto grid max-w-7xl overflow-hidden rounded-[30px] bg-[#244584] shadow-xl lg:grid-cols-2">
@@ -220,7 +577,7 @@ export default function EventsPage() {
               A Practice of Compassion
             </span>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight md:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight md:text-[46px]">
               Food Distribution
               <span className="block text-[#FFCA45]">
                 & Daily Seva
@@ -250,6 +607,9 @@ export default function EventsPage() {
 
         </div>
       </section>
+
+
+
       {/* DAILY SCHEDULE */}
       <section className="bg-white px-5 py-20 md:px-10 md:py-24">
         <div className="mx-auto max-w-7xl">

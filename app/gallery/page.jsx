@@ -29,6 +29,15 @@ const galleryCategories = [
        "/assets/images/gallery2.jpg",
         "/assets/images/gallery3.jpg",
     ],
+    captions: [
+      "Ashram Garden",
+      "Temple Area",
+      "Ashram Outside Area",
+      "Ashram Inside Area",
+      "Ashram Premises",
+      "Garden & Open Space",
+      "Ashram View",
+    ],
   },
 
   {
@@ -53,7 +62,7 @@ const galleryCategories = [
   },
   {
     id: "guests",
-    label: "Photos Guests",
+    label: "Guest Pictures",
     images: [
       "/assets/images/gl1.jpg",
       "/assets/images/gl2.jpg",
@@ -65,6 +74,18 @@ const galleryCategories = [
       "/assets/images/guests/4.jpg",
       "/assets/images/guests/5.jpg",
       "/assets/images/guests/6.jpg",
+    ],
+    captions: [
+      "Bonfire",
+      "Chilling Outside",
+      "Holi",
+      "Holi",
+      "Chilling Outside",
+      "Bonfire",
+      "Chilling Outside",
+      "A Happy Evening",
+      "Bonfire",
+      "Chilling Outside",
     ],
   },
   {
@@ -88,6 +109,24 @@ const galleryCategories = [
       "/assets/images/temple-hall/15.jpg",
       "/assets/images/temple-hall/16.jpg",
     ],
+    captions: [
+      "Temple Hall",
+      "Temple",
+      "Temple Hall",
+      "GauSHala", 
+      "God Characters",
+      "God Characters",
+      "God",
+      "Shivling",
+      "Temple",
+      "Lord Krishna",
+      "Temple, Hall & Lawn",
+      "God",
+      "God",
+      "God",
+      "Kirtan",
+      "Lord Krishna",
+    ],
   },
  
   {
@@ -98,6 +137,12 @@ const galleryCategories = [
       "/assets/images/activitie1.jpg",
       "/assets/images/food.jpg",
       "/assets/images/bhajan.jpg",
+    ],
+    captions: [
+      "Distributing Religious Material",
+      "Offering/Sacrament",
+      "Religious Material",
+      "Bhajan Kirtan",
     ],
   },
   
@@ -294,111 +339,127 @@ function GalleryCarousel({ category, onImageClick }) {
 
 
       {/* 3D INFINITE CAROUSEL */}
-      <div
-        className="relative z-10 h-[280px] w-full sm:h-[390px] md:h-[440px]"
-        style={{ perspective: "1200px" }}
+
+<div
+  className="relative z-10 h-[280px] w-full sm:h-[390px] md:h-[440px]"
+  style={{ perspective: "1200px" }}
+>
+  {[-2, -1, 0, 1, 2].map((offset) => {
+
+    const unwrappedIndex = activeIndex + offset;
+
+    const imageIndex =
+      ((unwrappedIndex % totalImages) + totalImages) % totalImages;
+
+    const cycle = Math.floor(unwrappedIndex / totalImages);
+
+    const image = images[imageIndex];
+
+    const isCenter = offset === 0;
+
+    // USE MEANINGFUL IMAGE CAPTIONS
+    const imageCaption =
+      category.captions?.[imageIndex] || category.label;
+
+    return (
+      <motion.button
+        key={`${category.id}-${cycle}-${imageIndex}`}
+        type="button"
+        onClick={() => {
+          if (isCenter) {
+            onImageClick(imageIndex);
+          } else {
+            setActiveIndex(imageIndex);
+          }
+        }}
+        aria-label={
+          isCenter
+            ? `View ${imageCaption}`
+            : `Show ${imageCaption}`
+        }
+        initial={false}
+        animate={{
+          x: offset * spacing,
+          scale: isCenter
+            ? 1
+            : Math.max(0.58, 0.84 - Math.abs(offset) * 0.09),
+          rotateY: offset * -28,
+          z: isCenter ? 100 : -Math.abs(offset) * 100,
+          opacity:
+            totalImages < 3 && !isCenter
+              ? 0
+              : Math.abs(offset) === 2
+                ? 0.35
+                : Math.abs(offset) === 1
+                  ? 0.75
+                  : 1,
+        }}
+        transition={{
+          duration: 0.55,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="absolute left-1/2 top-1/2 w-[72vw] max-w-[430px] -translate-x-1/2 -translate-y-1/2"
+        style={{
+          transformStyle: "preserve-3d",
+          transformOrigin: "center center",
+          zIndex: 10 - Math.abs(offset),
+          pointerEvents:
+            totalImages < 3 && !isCenter ? "none" : "auto",
+        }}
       >
-        {[-2, -1, 0, 1, 2].map((offset) => {
 
-          const unwrappedIndex = activeIndex + offset;
-          const imageIndex =
-            ((unwrappedIndex % totalImages) + totalImages) % totalImages;
-          const cycle = Math.floor(unwrappedIndex / totalImages);
+        {/* IMAGE CARD */}
 
-          const image = images[imageIndex];
+        <div
+          className={`group relative aspect-[4/3] overflow-hidden rounded-2xl border-2 bg-white p-1.5 shadow-2xl transition-colors duration-500 sm:rounded-3xl sm:p-2 ${
+            isCenter
+              ? "border-[#FFB900] shadow-[#FFB900]/20"
+              : "border-white/20"
+          }`}
+        >
 
-          const isCenter = offset === 0;
+          <img
+            src={image}
+            alt={imageCaption}
+            loading="lazy"
+            draggable="false"
+            className="h-full w-full rounded-xl object-cover sm:rounded-2xl"
+          />
 
-          return (
-            <motion.button
-              key={`${category.id}-${cycle}-${imageIndex}`}
-              type="button"
-              onClick={() => {
-                if (isCenter) {
-                  onImageClick(imageIndex);
-                } else {
-                  setActiveIndex(imageIndex);
-                }
-              }}
-              aria-label={
-                isCenter
-                  ? `View ${category.label} photo ${imageIndex + 1}`
-                  : `Show photo ${imageIndex + 1}`
-              }
-              initial={false}
-              animate={{
-                x: offset * spacing,
-                scale: isCenter ? 1 : Math.max(0.58, 0.84 - Math.abs(offset) * 0.09),
-                rotateY: offset * -28,
-                z: isCenter ? 100 : -Math.abs(offset) * 100,
-                opacity:
-                  totalImages < 3 && !isCenter
-                    ? 0
-                    : Math.abs(offset) === 2
-                      ? 0.35
-                      : Math.abs(offset) === 1
-                        ? 0.75
-                        : 1,
-              }}
-              transition={{
-                duration: 0.55,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="absolute left-1/2 top-1/2 w-[72vw] max-w-[430px] -translate-x-1/2 -translate-y-1/2"
-              style={{
-                transformStyle: "preserve-3d",
-                transformOrigin: "center center",
-                zIndex: 10 - Math.abs(offset),
-                pointerEvents:
-                  totalImages < 3 && !isCenter ? "none" : "auto",
-              }}
-            >
-              {/* IMAGE CARD */}
-              <div
-                className={`group relative aspect-[4/3] overflow-hidden rounded-2xl border-2 bg-white p-1.5 shadow-2xl transition-colors duration-500 sm:rounded-3xl sm:p-2 ${
-                  isCenter
-                    ? "border-[#FFB900] shadow-[#FFB900]/20"
-                    : "border-white/20"
-                }`}
-              >
+          {/* IMAGE OVERLAY */}
 
-                <img
-                  src={image}
-                  alt={`${category.label} ${imageIndex + 1}`}
-                  loading="lazy"
-                  draggable="false"
-                  className="h-full w-full rounded-xl object-cover sm:rounded-2xl"
-                />
+          <div className="absolute inset-1.5 rounded-xl bg-gradient-to-t from-[#071426]/80 via-transparent to-transparent sm:inset-2 sm:rounded-2xl" />
 
-                {/* IMAGE OVERLAY */}
-                <div className="absolute inset-1.5 rounded-xl bg-gradient-to-t from-[#071426]/80 via-transparent to-transparent sm:inset-2 sm:rounded-2xl" />
+          {/* IMAGE CONTENT */}
 
-                {/* CENTER IMAGE CONTENT */}
-                <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between sm:bottom-6 sm:left-6 sm:right-6">
+          <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between sm:bottom-6 sm:left-6 sm:right-6">
 
-                  <div className="text-left">
-                    <p className="text-[10px] font-semibold uppercase tracking-[2px] text-[#FFCA45] sm:text-xs">
-                      {category.label}
-                    </p>
+            <div className="text-left">
 
-                    <p className="mt-1 text-sm font-bold text-white sm:text-lg">
-                      Photo {imageIndex + 1}
-                    </p>
-                  </div>
+              <p className="text-[10px] font-semibold uppercase tracking-[2px] text-[#FFCA45] sm:text-xs">
+                {category.label}
+              </p>
 
-                  {isCenter && (
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFB900] text-[#14233F] shadow-xl">
-                      <Maximize2 size={19} />
-                    </span>
-                  )}
+              <p className="mt-1 text-sm font-bold text-white sm:text-lg">
+                {imageCaption}
+              </p>
 
-                </div>
+            </div>
 
-              </div>
-            </motion.button>
-          );
-        })}
-      </div>
+            {isCenter && (
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFB900] text-[#14233F] shadow-xl">
+                <Maximize2 size={19} />
+              </span>
+            )}
+
+          </div>
+
+        </div>
+
+      </motion.button>
+    );
+  })}
+</div>
 
       {/* NAVIGATION */}
       <div className="relative z-20 mt-5 flex items-center justify-center gap-5">
@@ -470,7 +531,7 @@ function GalleryCarousel({ category, onImageClick }) {
     <main className="overflow-x-clip bg-[#F5F7FB] text-[#14233F]">
 
       {/* HERO BANNER */}
-      <section className="pt-[28px] sm:pt-0 relative flex min-h-[350px] items-center overflow-hidden md:min-h-[440px]">
+      <section className="pt-[90px] sm:pt-0 relative flex min-h-[410px] items-center overflow-hidden md:min-h-[440px]">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[7000ms] hover:scale-105"
           style={{
@@ -482,21 +543,21 @@ function GalleryCarousel({ category, onImageClick }) {
         <div className="absolute inset-0 bg-[#102B58]/75" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#102B58]/90 via-[#102B58]/50 to-transparent" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-5 py-20 md:px-10">
+        <div className="relative mx-auto relative w-full max-w-[1320px] item-center px-5 sm:px-6 lg:px-8">
           <div data-aos="fade-up" className="max-w-2xl">
 
-            <div className="mb-5 flex items-center gap-3">
+            <div className="mb-3 md:mb-5 flex items-center gap-3">
               <span className="h-[2px] w-12 bg-[#FFB900]" />
               <span className="text-xs font-bold uppercase tracking-[4px] text-[#FFCA45]">
                 Shree Krishna Bhakti Ashram
               </span>
             </div>
 
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
+            <h1 className="text-4xl font-bold leading-tight text-white md:text-[46px]">
               Our <span className="text-[#FFB900]">Gallery</span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-8 text-white/85 md:text-lg">
+            <p className="mt-3 md:mt-5 max-w-xl text-base leading-8 text-white/85 md:text-lg">
               Explore beautiful moments, peaceful surroundings,
               comfortable rooms, and spiritual experiences at our Ashram.
             </p>
@@ -527,7 +588,7 @@ function GalleryCarousel({ category, onImageClick }) {
             <span className="h-[2px] w-10 bg-[#FFB900]" />
           </div>
 
-          <h2 className="text-3xl font-bold text-[#14233F] md:text-5xl">
+          <h2 className="text-3xl font-bold text-[#14233F] md:text-[46px]">
             Explore Our Ashram
           </h2>
 
