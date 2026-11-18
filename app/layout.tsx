@@ -1,5 +1,6 @@
 
 import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
@@ -13,10 +14,15 @@ const raleway = Raleway({
   display: "swap",  
 });
   
-export const metadata = {
+export const metadata: Metadata = {
   title: "Shree Krishna Bhakti Ashram",
   description:
     "Discover spiritual peace, accommodation, devotional activities and sacred experiences at Shree Krishna Bhakti Ashram.",
+  icons: {
+    icon: "/favicon.png?v=2",
+    shortcut: "/favicon.png?v=2",
+    apple: "/favicon.png?v=2",
+  },
 };
 
 export default function RootLayout({
