@@ -91,7 +91,13 @@ const roomCategories = [
         // description:
         //   "A simple and welcoming room for guests seeking a peaceful visit.",
       },
-      
+      {
+        id: 11,
+        name: "Attach Bathroom",
+        image: "/assets/images/diffrent-booking-sites/5.jpg",
+        guests: "Family Stay",
+        detail: "Family Comfort",
+      },
       {
         id: 12,
         name: "Attach Bathroom",
@@ -113,13 +119,7 @@ const roomCategories = [
         guests: "Family Stay",
         detail: "Family Comfort",
       },
-      {
-        id: 15,
-        name: "Deluxe Out Side Look",
-        image: "/assets/images/diffrent-booking-sites/5.jpg",
-        guests: "Family Stay",
-        detail: "Family Comfort",
-      },
+      
       
       // {
       //   id: 17,
@@ -135,17 +135,11 @@ const roomCategories = [
         guests: "Family Stay",
         detail: "Family Comfort",
       },
-      {
-        id: 19,
-        name: "Deluxe Bathroom",
-        image: "/assets/images/diffrent-booking-sites/9.jpg",
-        guests: "Family Stay",
-        detail: "Family Comfort",
-      },
+      
     ],
   },
   {
-    id: "deluxe-online",
+    id: "Premium-online",
     label: "Premium Room",
     description:
       "Discover Deluxe Room options listed on external booking platforms. Check each listing for current prices and availability.",
@@ -176,7 +170,7 @@ const roomCategories = [
       {
         id: 23,
         name: "Deluxe Stay Room",
-        image: "/assets/images/deluxe-booking-sites/4.jpg",
+        image: "/assets/images/deluxe-booking-sites/11.jpg",
         guests: "2–3 Guests",
         detail: "Online Listing",
         // description:
@@ -184,19 +178,9 @@ const roomCategories = [
         bookingUrl: "",
         bookingSite: "View Booking Options",
       },
+     
       {
         id: 24,
-        name: "Deluxe Stay Room",
-        image: "/assets/images/deluxe-booking-sites/5.jpg",
-        guests: "2–3 Guests",
-        detail: "Online Listing",
-        // description:
-        //   "Visit the relevant listing to review room details, prices, and booking conditions.",
-        bookingUrl: "",
-        bookingSite: "View Booking Options",
-      },
-      {
-        id: 25,
         name: "Deluxe Double Bedroom",
         image: "/assets/images/deluxe-booking-sites/6.jpg",
         guests: "2–3 Guests",
@@ -676,34 +660,36 @@ useEffect(() => {
                     {room.detail}
                   </span>
 
-                  <div className="pointer-events-none absolute bottom-5 left-5 right-5 text-white">
+                  {/* <div className="pointer-events-none absolute bottom-5 left-5 right-5 text-white">
                     <h3 className="text-2xl font-semibold leading-tight sm:text-3xl">
                       {room.name}
                     </h3>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Room details */}
                 <div className="pt-5">
-  <div className="mb-1 flex flex-wrap items-center gap-2 text-xs text-gray-500">
-    <Users size={15} className="text-[#2c83a5]" />
-    {room.guests}
+                <div className="mb-1 flex flex-wrap items-center gap-2 text-xs text-gray-500">
+                  <Users size={15} className="text-[#2c83a5]" />
+                  {room.guests}
 
-    <span className="mx-1 text-gray-300">|</span>
+                  <span className="mx-1 text-gray-300">|</span>
 
-    <BedDouble size={15} className="text-[#2c83a5]" />
+                  <BedDouble size={15} className="text-[#2c83a5]" />
 
-    {activeCategory.id === "super-deluxe"
-      ? "Super Deluxe"
-      : "Deluxe Room"}
-  </div>
+                  {activeCategory.id === "super-deluxe"
+                    ? "Super Deluxe"
+                    : activeCategory.id === "deluxe-direct"
+                    ? "Deluxe Room"
+                    : "Premium Room"}
+                </div>
 
   {/* <p className="min-h-[72px] text-sm leading-6 text-gray-600">
     {room.description}
   </p> */}
 
   {/* Booking action */}
-  {activeCategory.id === "deluxe-online" ? (
+  {/* {activeCategory.id === "deluxe-online" ? (
     room.bookingUrl ? (
       <a
         href={room.bookingUrl}
@@ -739,9 +725,9 @@ useEffect(() => {
         </Link>
       </div>
     )
-  ) : (
-    /* Wrapped both buttons in a fragment and added a gap for layout separation */
-    <>
+  ) : ( */}
+    
+    {/* <>
       <div className="mt-5 flex flex-wrap gap-3">
         <Link
           href="/contact"          
@@ -760,7 +746,7 @@ useEffect(() => {
         </Link>
       </div>
     </>
-  )}
+  )} */}
 </div>
 
               </motion.article>

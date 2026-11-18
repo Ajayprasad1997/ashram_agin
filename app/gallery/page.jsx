@@ -22,6 +22,7 @@ const galleryCategories = [
     label: "Ashram Overview",
     images: [
       "/assets/images/about1.jpg",
+      "/assets/images/resption.jpg",
       "/assets/images/about2.jpg",
       "/assets/images/about3.jpg",
       "/assets/images/about4.jpg",
@@ -31,6 +32,7 @@ const galleryCategories = [
     ],
     captions: [
       "Ashram Garden",
+      "Reception",
       "Temple Area",
       "Ashram Outside Area",
       "Ashram Inside Area",
@@ -38,18 +40,7 @@ const galleryCategories = [
       "Garden & Open Space",
       "Ashram View",
     ],
-  },
-
-  {
-    id: "deluxe",
-    label: "Deluxe Rooms",
-    images: [
-      "/assets/images/deluxe-booking-sites/1.jpg",
-      "/assets/images/deluxe-booking-sites/2.jpg",
-      "/assets/images/deluxe-booking-sites/3.jpg",
-      "/assets/images/deluxe-booking-sites/4.jpg",
-    ],
-  },
+  },  
   {
     id: "super-deluxe",
     label: "Super Deluxe Rooms",
@@ -58,6 +49,16 @@ const galleryCategories = [
       "/assets/images/super-deluxe-rooms/2.jpg",
       "/assets/images/super-deluxe-rooms/3.jpg",
       "/assets/images/super-deluxe-rooms/4.jpg",
+    ],
+  },
+  {
+    id: "Premium",
+    label: "Premium Rooms",
+    images: [
+      "/assets/images/deluxe-booking-sites/1.jpg",
+      "/assets/images/deluxe-booking-sites/2.jpg",
+      "/assets/images/deluxe-booking-sites/3.jpg",
+      "/assets/images/deluxe-booking-sites/11-0.jpg",
     ],
   },
   {
@@ -73,7 +74,7 @@ const galleryCategories = [
       "/assets/images/guests/3.jpg",
       "/assets/images/guests/4.jpg",
       "/assets/images/guests/5.jpg",
-      "/assets/images/guests/6.jpg",
+      
     ],
     captions: [
       "Bonfire",
@@ -81,25 +82,22 @@ const galleryCategories = [
       "Holi",
       "Holi",
       "Chilling Outside",
-      "Bonfire",
-      "Chilling Outside",
       "A Happy Evening",
       "Bonfire",
-      "Chilling Outside",
+      "A Happy Evening",
+      "Bonfire",
+      
     ],
   },
   {
     id: "temple",
-    label: "Temple, Hall & Lawn",
+    label: "Temple, Hall, Lawn & Gaushala",
     images: [
        "/assets/images/temple-hall/1.jpg",
-      "/assets/images/temple-hall/2.jpg",
       "/assets/images/temple-hall/3.jpg",
       "/assets/images/temple-hall/4.jpg",
       "/assets/images/temple-hall/5.jpg",
-      "/assets/images/temple-hall/6.jpg",
       "/assets/images/temple-hall/7.jpg",
-      "/assets/images/temple-hall/8.jpg",
       "/assets/images/temple-hall/9.jpg",
       "/assets/images/temple-hall/10.jpg",
       "/assets/images/temple-hall/11.jpg",
@@ -108,24 +106,23 @@ const galleryCategories = [
       "/assets/images/temple-hall/14.jpg",
       "/assets/images/temple-hall/15.jpg",
       "/assets/images/temple-hall/16.jpg",
+      "/assets/images/temple-hall/boy1.jpg",
     ],
     captions: [
       "Temple Hall",
-      "Temple",
       "Temple Hall",
       "GauSHala", 
-      "God Characters",
-      "God Characters",
-      "God",
-      "Shivling",
+      "Rash",
+      "Rash",
       "Temple",
-      "Lord Krishna",
+      "Radha Krishna",
       "Temple, Hall & Lawn",
-      "God",
-      "God",
-      "God",
-      "Kirtan",
-      "Lord Krishna",
+      "Radha Krishna",
+      "Radha Krishna",
+      "Radha Krishna",
+      "Bhagwat Katha",
+      "Radha Krishna",
+       "Play Ground",
     ],
   },
  
@@ -142,7 +139,7 @@ const galleryCategories = [
       "Distributing Religious Material",
       "Offering/Sacrament",
       "Religious Material",
-      "Bhajan Kirtan",
+      "Bhagwat Katha",
     ],
   },
   
@@ -159,6 +156,10 @@ export default function GalleryPage() {
   );
 
   const images = activeCategory?.images || [];
+  const lightboxCaption =
+    activeCategory?.captions?.[lightboxIndex] ||
+    activeCategory?.label ||
+    "Gallery image";
   const lightboxOpen = lightboxIndex !== null;
 
   useEffect(() => {
@@ -755,7 +756,7 @@ function GalleryCarousel({ category, onImageClick }) {
             <img
               key={images[lightboxIndex]}
               src={images[lightboxIndex]}
-              alt={`${activeCategory?.label} photo ${lightboxIndex + 1}`}
+              alt={lightboxCaption}
               className="max-h-[75vh] w-auto max-w-full rounded-xl border border-white/10 object-contain shadow-2xl"
             />
 
@@ -764,7 +765,7 @@ function GalleryCarousel({ category, onImageClick }) {
                 {activeCategory?.label}
               </h3>
               <p className="mt-1 text-sm text-white/60">
-                Photo {lightboxIndex + 1}
+                {lightboxCaption}
               </p>
             </div>
           </div>

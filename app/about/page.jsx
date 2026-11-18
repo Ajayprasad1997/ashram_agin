@@ -30,15 +30,31 @@ import {
   HandHeart,
   CalendarDays,
   Sparkles,
+  X,
   ChevronLeft,
   ChevronRight,
+  Wifi,
 } from "lucide-react";
 
 
 const sliderImages = [
   '/assets/images/about1.jpg',
   '/assets/images/about3.jpg',
-  '/assets/images/about5.jpg',
+  '/assets/images/temple-hall/4.jpg',
+];
+
+const aboutUsParagraphs = [
+  "Shri Krishna Bhakti Ashram welcomes guests into a peaceful retreat rooted in years of quiet devotion and family tradition. Once a private home, the ashram opened its doors to all three years ago, inviting visitors to experience its warmth, serenity, and spiritual atmosphere.",
+
+  "It offers ten comfortable rooms across Super Deluxe, Deluxe, and Premium categories, along with expansive green lawns and a beautiful temple where daily morning and evening rituals and prayers take place. Guests are warmly welcome to join the prayers, enjoy the gardens, and take part in the ashram's devotional life.",
+
+  "Each morning, food is offered to those in need and to holy men, and guests may join this act of service through their time or contributions. Special celebrations, including Raslila, are held on auspicious occasions.",
+
+  "The ashram can also host spiritual gatherings such as Bhagwat Katha and other religious events, by prior arrangement and at an additional cost.",
+
+  "More than a place to stay, Shri Krishna Bhakti Ashram carries a deeply personal spiritual legacy. It was once the home of our grandfather, a profoundly spiritual and devoted soul whose faith and warmth shaped the essence of this place. We believe his blessings and spiritual presence continue to reside here, creating an atmosphere of rare calm and serenity that visitors can feel.",
+
+  "Today, we are delighted to share this special place with all who seek a peaceful retreat, a deeper connection with devotion, or simply a moment away from the demands of everyday life. At Shri Krishna Bhakti Ashram, we hope every guest finds not just a place to stay, but an experience of devotion, warmth, inner peace, and a sense of belonging.",
 ];
 
   const boxSliderVariants = {
@@ -130,10 +146,11 @@ function useCountUp(target, duration = 2000) {
 
 function AboutThreeColumnSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const counter1 = useCountUp("10000+");
-  const counter2 = useCountUp("94%");
-  const counter3 = useCountUp("100");
-  const counter4 = useCountUp("7+");
+  // const counter1 = useCountUp("10000+");
+  // const counter2 = useCountUp("94%");
+  // const counter3 = useCountUp("100");
+  // const counter4 = useCountUp("7+");
+  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -150,98 +167,179 @@ function AboutThreeColumnSection() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-center">
 
           {/* COLUMN 1 */}
-          <div
-            data-aos="fade-right"
-            className="flex flex-col justify-center lg:col-span-4"
+         <div
+            data-aos="fade-up"
+            className="relative my-3 flex min-h-[330px] lg:min-h-[460px] flex-col items-start justify-start lg:col-span-4 lg:my-0"
           >
-            <p className="mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[3px] text-[#294985]">
-              <span className="h-px w-9 bg-[#FFB900]" />
-              About Our Ashram
+
+          <h2
+            className="text-3xl font-bold uppercase tracking-wide text-[#244584] sm:text-4xl md:text-5xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            About the
+            <span className="mt-1 block text-[#fdbb00]">
+              Ashram
+            </span>
+          </h2>
+
+          {/* INTRODUCTION */}
+          <div className="mt-6 space-y-4 text-sm leading-7 text-gray-600">
+
+            <p
+              className="font-semibold text-gray-800"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              Shri Krishna Bhakti Ashram welcomes guests into a peaceful
+              retreat rooted in years of quiet devotion and family tradition.
             </p>
 
-            <h2 className="text-4xl font-extrabold uppercase leading-tight text-[#2c4984] md:text-[46px]">
-              About The
-              <br />
-              <span className="text-[#FFB900]">Ashram</span>
-            </h2>
-
-            <p className="mt-5 text-[15px] font-medium leading-7 text-[#202D43]">
-              The Ashram is an ancestral property now open to guests
-              seeking a peaceful, comfortable, and spiritually
-              enriching stay in Vrindavan.
+            <p
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              Once a private home, the ashram opened its doors to all
+              three years ago, inviting visitors to experience its warmth,
+              serenity, and spiritual atmosphere.
             </p>
 
-            {/* COUNTERS */}
-            <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-gray-100 pt-6">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              It offers ten comfortable rooms across Super Deluxe,
+              Deluxe, and Premium categories, along with expansive
+              green lawns and a beautiful temple where daily prayers
+              and rituals take place.
+            </p>
 
-              <div>
-                <span
-                  ref={counter1.ref}
-                  className="block text-3xl font-extrabold text-[#294985]"
-                >
-                  {counter1.value}
-                </span>
-
-                <span className="mt-1 block text-xs text-[#737F91]">
-                  Yearly seekers & visitors
-                </span>
-              </div>
-
-              <div>
-                <span
-                  ref={counter2.ref}
-                  className="block text-3xl font-extrabold text-[#294985]"
-                >
-                  {counter2.value}
-                </span>
-
-                <span className="mt-1 block text-xs text-[#737F91]">
-                  Peaceful return rate
-                </span>
-              </div>
-
-              <div>
-                <span
-                  ref={counter3.ref}
-                  className="block text-3xl font-extrabold text-[#294985]"
-                >
-                  <span className="mr-1 text-sm font-bold text-[#737F91]">
-                    Top
-                  </span>
-                  {counter3.value}
-                </span>
-
-                <span className="mt-1 block text-xs text-[#737F91]">
-                  Spiritual destinations
-                </span>
-              </div>
-
-              <div>
-                <span
-                  ref={counter4.ref}
-                  className="block text-3xl font-extrabold text-[#294985]"
-                >
-                  {counter4.value}
-                </span>
-
-                <span className="mt-1 block text-xs text-[#737F91]">
-                  Sacred facilities
-                </span>
-              </div>
-
-            </div>
-
-            {/* BOOKING BUTTON */}
-            <div className="mt-8">
-              <Link
-                href="/accommodation"
-                className="inline-flex items-center gap-3 rounded-full bg-[#294985] px-7 py-4 text-xs font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#FFB900] hover:text-[#202D43]"
-              >
-                BOOK YOUR STAY NOW
-                <ArrowRight size={16} />
-              </Link>
-            </div>
           </div>
+
+          {/* READ MORE */}
+          <button
+            type="button"
+            onClick={() => setIsAboutModalOpen(true)}
+            className="mt-5 inline-flex w-fit items-center gap-2 text-sm font-bold text-[#244584] transition hover:text-[#fdbb00]"
+            data-aos="fade-up"
+            data-aos-delay="450"
+          >
+            Read More
+            <ArrowRight size={17} />
+          </button>
+
+          {/* ACTION BUTTONS */}
+          <div
+            className="mt-7 flex flex-wrap gap-4"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >           
+
+            <Link
+              href="/accommodation"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#244584] px-7 text-xs font-bold uppercase tracking-wide text-[#244584] transition duration-300 hover:bg-[#244584] hover:text-white"
+            >
+              Book Your Stay
+              <ArrowRight size={16} />
+            </Link>
+
+          </div>
+
+          
+        </div>
+         {/* ABOUT US MODAL */}
+  {isAboutModalOpen && (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#07172f]/75 p-3 backdrop-blur-sm sm:p-6"
+      onClick={() => setIsAboutModalOpen(false)}
+    >
+      <div
+        className="relative flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl sm:rounded-3xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+
+        {/* MODAL HEADER */}
+        <div className="relative shrink-0 bg-gradient-to-r from-[#244584] to-[#285b91] px-6 py-6 text-white sm:px-9">
+
+          <div className="flex items-center justify-between gap-4">
+
+            <div>
+              <span className="mb-2 block text-xs font-semibold uppercase tracking-[3px] text-[#fdbb00]">
+                Welcome to Vrindavan
+              </span>
+
+              <h3 className="text-2xl font-bold sm:text-3xl">
+                About Our Ashram
+              </h3>
+
+              <p className="mt-2 text-xs text-white/80 sm:text-sm">
+                A place of devotion, peace and belonging
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setIsAboutModalOpen(false)}
+              aria-label="Close modal"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 transition hover:bg-[#fdbb00] hover:text-[#244584]"
+            >
+              <X size={21} />
+            </button>
+
+          </div>
+
+          <div className="absolute bottom-0 left-0 h-1 w-24 rounded-full bg-[#fdbb00]" />
+
+        </div>
+
+        {/* MODAL CONTENT */}
+        <div className="overflow-y-auto px-6 py-7 sm:px-9 sm:py-8">
+
+          <div className="mb-6 rounded-xl border-l-4 border-[#fdbb00] bg-[#f5f7fb] p-4">
+            <p className="text-sm font-semibold leading-7 text-[#244584]">
+              Experience the warmth of family tradition,
+              spiritual devotion and the peaceful atmosphere
+              of Shri Krishna Bhakti Ashram.
+            </p>
+          </div>
+
+          <div className="space-y-5 text-sm leading-8 text-gray-600 sm:text-base">
+
+            {aboutUsParagraphs.map((paragraph, index) => (
+              <p key={index}>
+                {paragraph}
+              </p>
+            ))}
+
+          </div>
+
+          {/* MODAL FOOTER */}
+          <div className="mt-8 flex flex-wrap gap-3 border-t border-gray-100 pt-6">
+
+            <Link
+              href="/accommodation"
+              onClick={() => setIsAboutModalOpen(false)}
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#244584] px-7 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#fdbb00] hover:text-[#244584]"
+            >
+              Book Your Stay
+              <ArrowRight size={16} />
+            </Link>
+
+            <button
+              type="button"
+              onClick={() => setIsAboutModalOpen(false)}
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-gray-300 px-7 text-xs font-bold uppercase tracking-wide text-gray-600 transition hover:bg-gray-100"
+            >
+              Close
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )}
+       
 
           {/* COLUMN 2 - IMAGES */}
           <div
@@ -266,7 +364,7 @@ function AboutThreeColumnSection() {
 
             <div className="hidden border-2 border-[#737F91] lg:block relative md:absolute bottom-0 left-0 md:left-2 z-10 h-[290px] md:h-[140px] md:w-[78%] overflow-hidden rounded-xl shadow-lg">
               <img
-                src="/assets/images/about5.jpg"
+                src="/assets/images/temple-hall/4.jpg"
                 alt="Ashram surroundings"
                 className="h-full w-full object-cover"
               />
@@ -345,6 +443,8 @@ function AboutThreeColumnSection() {
         </div>
       </div>
     </section>
+
+    
   );
 }
 
@@ -365,15 +465,15 @@ function FacilitiesArcShowcaseSection({ facilities = [] }) {
 
   // Facility images
   const facilityImages = [
-  "https://media.easemytrip.com/media/Hotel/SHL-20011021459192/Common/CommonI8PXKf.jpg",
-  "https://images.trvl-media.com/lodging/3000000/2880000/2871000/2870961/47e337d5.jpg",
-  "https://pandavhotels.com/web_components/images/greens-kitchen.webp",
-  "https://www.mvt.co/assets/gallery3.png",
-  "https://www.visionhari.com/images/bailur/bailur6.jpg",
-  "https://www.temples.bio/public/img/iskcongokulam/cow1.png",
+  "/assets/images/sd/1.jpg",
+  "/assets/images/sd/5.jpg",
+  "/assets/images/sd/2.jpg",
+  "/assets/images/gallery1.jpg",
+  "/assets/images/tpr.jpg",
+  "/assets/images/temple-hall/4.jpg",
   "https://webfiles.amrita.edu/2024/12/amrita-sdg-6-free-drinking-water-img1.jpg",
-  "https://cdn0.weddingwire.in/vendor/1099/3_2/960/jpg/image-08_15_491099-176942573225861.jpeg",
-  "https://ens.viaxeo.com/ViaxeoWS/sp/files/V0xNZmFiTXBxRkV6ZnV2NnpJY2FmRm9GWTd5SGlVTHFhU2lqYU1hbk1TNFhQRmNzK0swTVdZTEV4OFc4QnJVa1A2NjNONDZyWVRvUVR1cUlxYlJlanc9PQ%3D%3D/th_hkt_dewa-phuket_005.jpg",
+  "/assets/images/about3.jpg",
+  "/assets/images/about1.jpg",
   "https://clampera.com/assets/portfolio-2-CAHx4Z41.jpg",
 ];
 
@@ -739,9 +839,15 @@ const facilities = [
   },
   {
     icon: ShieldCheck,
-    title: "Ground Floor Property",
+    title: "Temple",
     description:
       "The ground-floor layout makes the property suitable for elderly guests and those who prefer easy accessibility.",
+  },
+  {
+    icon: Wifi,
+    title: "WIFI",
+    description:
+      "Enjoy seamless high-speed Wi-Fi connectivity throughout your stay.",
   },
   {
     icon: Zap,
@@ -1203,7 +1309,7 @@ export default function AboutPage() {
           <div data-aos="fade-left" className="relative">
 
             <img
-              src="/assets/images/about5.jpg"
+              src="/assets/images/temple-hall/4.jpg"
               alt="Family hospitality at Shree Krishna Bhakti Ashram"
               className="h-[400px] w-full rounded-xl object-cover shadow-xl transition-transform duration-700 hover:scale-[1.02] md:h-[530px]"
             />

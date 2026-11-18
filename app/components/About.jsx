@@ -1,10 +1,28 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform,} from 'framer-motion';
 import Link from 'next/link';
+import { X, ArrowRight, BookOpen } from "lucide-react";
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
+
+
+
+const aboutParagraphs = [
+  "Shri Krishna Bhakti Ashram welcomes guests into a peaceful retreat rooted in years of quiet devotion and family tradition. Once a private home, the ashram opened its doors to all three years ago, inviting visitors to experience its warmth, serenity, and spiritual atmosphere.",
+
+  "It offers ten comfortable rooms across Super Deluxe, Deluxe, and Premium categories, along with expansive green lawns and a beautiful temple where daily morning and evening rituals and prayers take place. Guests are warmly welcome to join the prayers, enjoy the gardens, and take part in the ashram's devotional life.",
+
+  "Each morning, food is offered to those in need and to holy men, and guests may join this act of service through their time or contributions. Special celebrations, including Raslila, are held on auspicious occasions.",
+
+  "The ashram can also host spiritual gatherings such as Bhagwat Katha and other religious events, by prior arrangement and at an additional cost.",
+
+  "More than a place to stay, Shri Krishna Bhakti Ashram carries a deeply personal spiritual legacy. It was once the home of our grandfather, a profoundly spiritual and devoted soul whose faith and warmth shaped the essence of this place. We believe his blessings and spiritual presence continue to reside here, creating an atmosphere of rare calm and serenity that visitors can feel.",
+
+  "Today, we are delighted to share this special place with all who seek a peaceful retreat, a deeper connection with devotion, or simply a moment away from the demands of everyday life. At Shri Krishna Bhakti Ashram, we hope every guest finds not just a place to stay, but an experience of devotion, warmth, inner peace, and a sense of belonging.",
+];
+
 
 const sliderImages = [
   '/assets/images/about1.jpg',
@@ -15,7 +33,7 @@ const sliderImages = [
 
 export default function AboutAshram() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
   // 1. Hook up DOM reference boundaries to compute active scroll progress
   const sectionRef = useRef(null);
   
@@ -113,54 +131,185 @@ export default function AboutAshram() {
             </div>
           </div>
 
-          {/* RIGHT SIDE: Text Content Block with Staggered Fade Up */}
-          <div className="flex flex-col justify-center px-4 sm:px-2 lg:col-span-6 lg:max-w-2xl lg:px-8 xl:pl-16">
-            <h2 
-              className="text-3xl font-bold uppercase tracking-wide text-[#244584] sm:text-4xl md:text-5xl" 
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              About the <span className="mt-1 block text-[#fdbb00]">Ashram</span>
-            </h2>
-            
-            <div className="mt-6 space-y-4 text-sm leading-7 text-gray-600">
-              <p 
-                className="font-medium text-gray-800" 
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                The Ashram is an ancestral property.
-              </p>
-              <p 
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                It is now open to guests seeking a peaceful, comfortable, and spiritually enriching stay in Vrindavan.
-                The property offers a serene atmosphere, spacious rooms, a well-maintained garden, and a temple within the premises.
+          <>
+  {/* RIGHT SIDE: ABOUT CONTENT */}
+  <div className="flex flex-col justify-center px-4 sm:px-2 lg:col-span-6 lg:max-w-2xl lg:px-8 xl:pl-16">
+
+    <h2
+      className="text-3xl font-bold uppercase tracking-wide text-[#244584] sm:text-4xl md:text-5xl"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      About the
+      <span className="mt-1 block text-[#fdbb00]">
+        Ashram
+      </span>
+    </h2>
+
+    {/* INTRODUCTION */}
+    <div className="mt-6 space-y-4 text-sm leading-7 text-gray-600">
+
+      <p
+        className="font-semibold text-gray-800"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        Shri Krishna Bhakti Ashram welcomes guests into a peaceful
+        retreat rooted in years of quiet devotion and family tradition.
+      </p>
+
+      <p
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        Once a private home, the ashram opened its doors to all
+        three years ago, inviting visitors to experience its warmth,
+        serenity, and spiritual atmosphere.
+      </p>
+
+      <p
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        It offers ten comfortable rooms across Super Deluxe,
+        Deluxe, and Premium categories, along with expansive
+        green lawns and a beautiful temple where daily prayers
+        and rituals take place.
+      </p>
+
+    </div>
+
+    {/* READ MORE */}
+    <button
+      type="button"
+      onClick={() => setIsAboutModalOpen(true)}
+      className="mt-5 inline-flex w-fit items-center gap-2 text-sm font-bold text-[#244584] transition hover:text-[#fdbb00]"
+      data-aos="fade-up"
+      data-aos-delay="450"
+    >
+      Read More
+      <ArrowRight size={17} />
+    </button>
+
+    {/* ACTION BUTTONS */}
+    <div
+      className="mt-7 flex flex-wrap gap-4"
+      data-aos="fade-up"
+      data-aos-delay="500"
+    >
+ <Link
+        href="/accommodation"
+        className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#244584] px-7 text-xs font-bold uppercase tracking-wide text-white transition duration-300 hover:bg-[#fdbb00] hover:text-[#244584]"
+      >
+         <BookOpen size={16} />
+        About Us
+      </Link>
+      
+
+      <Link
+        href="/accommodation"
+        className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#244584] px-7 text-xs font-bold uppercase tracking-wide text-[#244584] transition duration-300 hover:bg-[#244584] hover:text-white"
+      >
+        Book Your Stay
+        <ArrowRight size={16} />
+      </Link>
+
+    </div>
+  </div>
+
+  {/* ABOUT US MODAL */}
+  {isAboutModalOpen && (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#07172f]/75 p-3 backdrop-blur-sm sm:p-6"
+      onClick={() => setIsAboutModalOpen(false)}
+    >
+      <div
+        className="relative flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl sm:rounded-3xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+
+        {/* MODAL HEADER */}
+        <div className="relative shrink-0 bg-gradient-to-r from-[#244584] to-[#285b91] px-6 py-6 text-white sm:px-9">
+
+          <div className="flex items-center justify-between gap-4">
+
+            <div>
+              <span className="mb-2 block text-xs font-semibold uppercase tracking-[3px] text-[#fdbb00]">
+                Welcome to Vrindavan
+              </span>
+
+              <h3 className="text-2xl font-bold sm:text-3xl">
+                About Our Ashram
+              </h3>
+
+              <p className="mt-2 text-xs text-white/80 sm:text-sm">
+                A place of devotion, peace and belonging
               </p>
             </div>
 
-            {/* Action Buttons Row */}
-            <div 
-              className="mt-8 flex flex-wrap gap-4"
-              data-aos="fade-up"
-              data-aos-delay="400"
+            <button
+              type="button"
+              onClick={() => setIsAboutModalOpen(false)}
+              aria-label="Close modal"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 transition hover:bg-[#fdbb00] hover:text-[#244584]"
             >
-              <Link
-                href="/accommodation"
-                className="inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-[#244584] px-6 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#fdbb00]"
-              >
-                Book Your Stay
-              </Link>
-              
-              <Link
-                href="/events"
-                className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#244584] px-6 text-xs font-bold uppercase tracking-wider text-[#244584] transition hover:bg-[#244584] hover:text-white"
-              >
-                Our Activities
-              </Link>
-            </div>
+              <X size={21} />
+            </button>
+
           </div>
+
+          <div className="absolute bottom-0 left-0 h-1 w-24 rounded-full bg-[#fdbb00]" />
+
+        </div>
+
+        {/* MODAL CONTENT */}
+        <div className="overflow-y-auto px-6 py-7 sm:px-9 sm:py-8">
+
+          <div className="mb-6 rounded-xl border-l-4 border-[#fdbb00] bg-[#f5f7fb] p-4">
+            <p className="text-sm font-semibold leading-7 text-[#244584]">
+              Experience the warmth of family tradition,
+              spiritual devotion and the peaceful atmosphere
+              of Shri Krishna Bhakti Ashram.
+            </p>
+          </div>
+
+          <div className="space-y-5 text-sm leading-8 text-gray-600 sm:text-base">
+
+            {aboutParagraphs.map((paragraph, index) => (
+              <p key={index}>
+                {paragraph}
+              </p>
+            ))}
+
+          </div>
+
+          {/* MODAL FOOTER */}
+          <div className="mt-8 flex flex-wrap gap-3 border-t border-gray-100 pt-6">
+
+            <Link
+              href="/accommodation"
+              onClick={() => setIsAboutModalOpen(false)}
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#244584] px-7 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#fdbb00] hover:text-[#244584]"
+            >
+              Book Your Stay
+              <ArrowRight size={16} />
+            </Link>
+
+            <button
+              type="button"
+              onClick={() => setIsAboutModalOpen(false)}
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-gray-300 px-7 text-xs font-bold uppercase tracking-wide text-gray-600 transition hover:bg-gray-100"
+            >
+              Close
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )}
+</>
 
         </div>
       </div>

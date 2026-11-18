@@ -70,6 +70,11 @@ const roomSections = [
         caption: "Bathroom",
       },
       {
+        src: "assets/images/sd/11.jpg",
+        alt: "Super deluxe room outlook",
+        caption: "Room Outlook",
+      },
+      {
         src: "assets/images/sd/6.jpg",
         alt: "Super deluxe room outlook",
         caption: "Room Outlook",
@@ -141,11 +146,7 @@ const roomSections = [
         alt: "Deluxe bathroom",
         caption: "Bathroom",
       },
-      {
-        src: "assets/images/db/12.jpg",
-        alt: "Deluxe bathroom interior",
-        caption: "Bathroom",
-      },
+      
     ],
   },
 
@@ -173,16 +174,17 @@ const roomSections = [
         alt: "Premium room interior",
         caption: "Room Interior",
       },
+       {
+        src: "assets/images/dr/3.jpg",
+        alt: "Premium room facilities",
+        caption: "Room Facilities",
+      },
       {
         src: "assets/images/dr/2.jpg",
         alt: "Premium room seating area",
         caption: "Comfortable Seating Area",
       },
-      {
-        src: "assets/images/dr/3.jpg",
-        alt: "Premium room facilities",
-        caption: "Room Facilities",
-      },
+     
       {
         src: "assets/images/dr/1.jpg",
         alt: "Premium double bedroom",
@@ -807,9 +809,7 @@ useEffect(() => {
             </h2>
 
             <p className="mt-5 text-sm leading-8 text-gray-600 sm:text-base">
-              We provide essential facilities and thoughtful
-              amenities to make your stay comfortable, peaceful
-              and convenient.
+             The Ashram does not provide regular meal service. Guests staying in Super Deluxe Rooms are welcome to use the kitchenette to prepare their own meals; basic utensils are provided. Several eateries just outside the Ashram serve homely food at reasonable prices. For larger gatherings and events, a separate kitchen space is available for a Maharaj or chef to prepare meals.
             </p>
 
           </div>

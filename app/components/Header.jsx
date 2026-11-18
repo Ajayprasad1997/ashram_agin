@@ -21,6 +21,10 @@ const navItems = [
     href: "/events",
   },
   {
+    label: "Pricing",
+    href: "/pricing",
+  },
+  {
     label: "Our Gallery",
     href: "/gallery",
   },
@@ -130,7 +134,7 @@ export default function Header() {
         <div className="hidden sm:flex mx-auto flex min-h-[56px] max-w-[1320px] items-center justify-between px-5 lg:px-8">
           {/* Desktop navigation */}
           <nav
-            className="hidden items-center gap-5 lg:flex xl:gap-7"
+            className="hidden items-center gap-5 lg:flex xl:gap-6"
             aria-label="Main navigation"
           >
             {navItems.map((item, index) => (
@@ -140,7 +144,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-1.5 whitespace-nowrap text-[16px] font-bold transition-colors hover:text-[#B96B25] ${
+                  className={`flex items-center gap-1.5 whitespace-nowrap text-[15px] font-bold transition-colors hover:text-[#B96B25] ${
                     index === 0
                       ? "font-bold text-[#B96B25]"
                       : "text-[#4B4037]"

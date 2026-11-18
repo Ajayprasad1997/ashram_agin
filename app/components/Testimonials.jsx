@@ -657,7 +657,7 @@ export default function Testimonials() {
 
       {showAll && (
         <div
-          className="fixed z-[99999999] top-0 left-0 md:static md:z-auto inset-0 z-[100] overflow-y-auto bg-[#10213d]/75 p-4 backdrop-blur-sm sm:p-8"
+          className="fixed z-[99999999] top-0 left-0 md:fixed inset-0 z-[100] overflow-y-auto bg-[#10213d]/75 p-4 backdrop-blur-sm sm:p-8"
           onClick={closeModals}
         >
           <div
