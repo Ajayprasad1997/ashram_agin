@@ -130,9 +130,9 @@ const galleryCategories = [
     captions: [
       "Temple Hall",
       "Temple Hall",
-      "GauSHala", 
+      "Gaushala", 
       "Rash",
-      "Rash",
+      "Radha Krishna",
       "Temple",
       "Radha Krishna",
       "Temple, Hall & Lawn",
@@ -320,7 +320,7 @@ function GalleryCarousel({ category, onImageClick }) {
 
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % totalImages);
-    }, 1000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [isPaused, totalImages]);

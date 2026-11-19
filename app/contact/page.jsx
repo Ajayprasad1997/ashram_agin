@@ -20,6 +20,7 @@ import {
   MessageCircle,
   Send,
   Clock,
+  CheckCircle2,
 } from "lucide-react";
 
 const inquiryOptions = [
@@ -32,7 +33,9 @@ const inquiryOptions = [
 
 export default function ContactPage() {
   const [inquiryType, setInquiryType] = useState("General");
-
+const [submitted, setSubmitted] = useState(false);
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitError, setSubmitError] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -43,7 +46,7 @@ export default function ContactPage() {
     subscribe: false,
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  
 
   useEffect(() => {
     AOS.init({
@@ -65,19 +68,55 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const submissionData = {
-      ...formData,
-      inquiryType,
-    };
+  setSubmitted(false);
+  setSubmitError("");
+  setIsSubmitting(true);
 
-    console.log("Contact Form Submitted:", submissionData);
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...formData,
+        inquiryType,
+      }),
+    });
 
-    // Connect your backend / email API here.
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || "Something went wrong.");
+    }
+
     setSubmitted(true);
-  };
+
+    // Reset form after successful email delivery
+    setFormData({
+      firstName: "",
+      lastName: "",
+      country: "",
+      phone: "",
+      email: "",
+      message: "",
+      subscribe: false,
+    });
+
+    setInquiryType("");
+  } catch (error) {
+    setSubmitError(
+      error instanceof Error
+        ? error.message
+        : "Unable to send your enquiry. Please try again."
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <main className="overflow-hidden bg-[#F5F7FB]">
@@ -367,10 +406,23 @@ export default function ContactPage() {
 
 
                 {/* SUCCESS MESSAGE */}
+               
                 {submitted && (
                   <div className="mb-6 rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-800">
-                    Your form has been validated. Please connect a backend
-                    or email service to deliver your enquiry.
+                    <div className="flex items-center gap-2 font-bold">
+                      <CheckCircle2 size={18} />
+                      Enquiry Sent Successfully!
+                    </div>
+                    <p className="mt-1">
+                      Thank you for contacting us. Our team will get back to you soon.
+                    </p>
+                  </div>
+                )}
+
+                {/* ERROR MESSAGE */}
+                {submitError && (
+                  <div className="mb-6 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                    {submitError}
                   </div>
                 )}
 
@@ -493,14 +545,17 @@ export default function ContactPage() {
                 {/* SUBMIT */}
                 <button
                   type="submit"
-                  className="group mt-8 flex min-h-[54px] w-full items-center justify-center gap-3 rounded-xl border border-[#294985] bg-[#294985] px-6 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#FFB900] hover:bg-[#FFB900] hover:text-[#fff] hover:shadow-xl"
+                  disabled={isSubmitting}
+                  className="group mt-8 flex min-h-[54px] w-full items-center justify-center gap-3 rounded-xl border border-[#294985] bg-[#294985] px-6 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#FFB900] hover:bg-[#FFB900] hover:text-white hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
                 >
-                  Submit Enquiry
+                  {isSubmitting ? "Sending Enquiry..." : "Submit Enquiry"}
 
-                  <Send
-                    size={17}
-                    className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                  />
+                  {!isSubmitting && (
+                    <Send
+                      size={17}
+                      className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                    />
+                  )}
                 </button>
 
 
