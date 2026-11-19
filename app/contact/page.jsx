@@ -213,7 +213,7 @@ export default function ContactPage() {
                   <div className="mt-3 flex flex-col gap-3 text-sm font-light text-[#16222f]">
 
                     <a
-                      href="#"
+                      href="https://www.instagram.com/shreekrishnabhaktiashram/"
                       target="_blank"
                       rel="noreferrer"
                       className="flex w-fit items-center gap-2 transition hover:translate-x-1 hover:text-[#fdbb00]"
@@ -223,19 +223,10 @@ export default function ContactPage() {
                       <ArrowUpRight size={13} />
                     </a>
 
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex w-fit items-center gap-2 transition hover:translate-x-1 hover:text-[#fdbb00]"
-                    >
-                      <Linkedin size={15} />
-                      LinkedIn
-                      <ArrowUpRight size={13} />
-                    </a>
+        
 
                     <a
-                      href="#"
+                      href="https://www.facebook.com/profile.php?id=61572344104721"
                       target="_blank"
                       rel="noreferrer"
                       className="flex w-fit items-center gap-2 transition hover:translate-x-1 hover:text-[#fdbb00]"
@@ -246,7 +237,7 @@ export default function ContactPage() {
                     </a>
 
                     <a
-                      href="#"
+                      href="https://www.google.com/search?kgmid=/g/11c529r4st&hl=en-IN&q=Shree+Krishna+Bhakti+Ashram&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/osrp/m1/2&kgs=31317842a6481b1e&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/osrp/m1/2"
                       target="_blank"
                       rel="noreferrer"
                       className="flex w-fit items-center gap-2 transition hover:translate-x-1 hover:text-[#fdbb00]"
@@ -271,10 +262,10 @@ export default function ContactPage() {
                   </h4>
 
                   <a
-                    href="mailto:stay@ashramresort.com"
+                    href="mailto:skbhaktiashram@gmail.com"
                     className="mt-3 inline-block break-all text-sm font-light text-[#16222f] transition hover:text-[#fdbb00]"
                   >
-                    stay@ashramresort.com
+                    skbhaktiashram@gmail.com
                   </a>
                 </div>
 
@@ -290,11 +281,21 @@ export default function ContactPage() {
                   </h4>
 
                   <a
-                    href="tel:+918583017971"
+                    href="tel:+919748088819"
                     className="mt-3 inline-block text-sm font-semibold tracking-wide text-[#16222f] transition hover:text-[#fdbb00]"
                   >
-                    +91 8583017971
+                    +919748088819
                   </a>
+                  <br />
+                  <a
+                    href="tel:+919286806006"
+                    className="mt-3 inline-block text-sm font-semibold tracking-wide text-[#16222f] transition hover:text-[#fdbb00]"
+                  >
+                    +919286806006
+                  </a>
+                  
+
+
                 </div>
 
               </div>

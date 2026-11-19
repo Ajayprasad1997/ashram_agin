@@ -52,13 +52,32 @@ const galleryCategories = [
     ],
   },
   {
+    id: "Deluxe Room ",
+    label: "Deluxe Rooms",
+    images: [
+     "/assets/images/db/1.jpg",
+      "/assets/images/db/2.jpg",
+      "/assets/images/db/6.jpg",
+      "/assets/images/db/7.jpg",
+      "/assets/images/db/9.jpg",
+      "/assets/images/db/10.jpg",
+      "/assets/images/db/11.jpg",
+    ],
+  },
+  {
     id: "Premium",
     label: "Premium Rooms",
     images: [
       "/assets/images/deluxe-booking-sites/1.jpg",
-      "/assets/images/deluxe-booking-sites/2.jpg",
-      "/assets/images/deluxe-booking-sites/3.jpg",
-      "/assets/images/deluxe-booking-sites/11-0.jpg",
+      "/assets/images/deluxe-booking-sites/11.jpg",
+      "/assets/images/deluxe-booking-sites/room3.jpg",
+      
+    ],
+    captions: [
+      "Room No. 1",
+      "Room No. 2",
+      "Room No. 3",     
+      
     ],
   },
   {
@@ -77,7 +96,7 @@ const galleryCategories = [
       
     ],
     captions: [
-      "Bonfire",
+      "Holi",
       "Chilling Outside",
       "Holi",
       "Holi",
@@ -91,7 +110,7 @@ const galleryCategories = [
   },
   {
     id: "temple",
-    label: "Temple, Hall, Lawn & Gaushala",
+    label: "Temple, Hall, Lawn, Gaushala & Events",
     images: [
        "/assets/images/temple-hall/1.jpg",
       "/assets/images/temple-hall/3.jpg",
@@ -610,7 +629,7 @@ function GalleryCarousel({ category, onImageClick }) {
   <div 
   className="sticky top-[75px] md:top-[75px] z-50 w-full border-y border-[#DCE3ED] bg-[#F5F7FB]/95 shadow-sm backdrop-blur-xl">
 
-    <div className="mx-auto max-w-7xl px-4 py-3 md:px-8">
+    <div className="mx-auto max-w-8xl px-4 py-3 md:px-8">
 
       <div ref={tabContainerRef} className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide lg:flex-wrap lg:justify-center">
 

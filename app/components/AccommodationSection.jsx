@@ -22,8 +22,7 @@ const roomCategories = [
       {
         id: 1,
         name: "Super Deluxe Room",
-        image: "/assets/images/super-deluxe-rooms/1.jpg",
-        guests: "2 Guests",
+        image: "/assets/images/super-deluxe-rooms/1.jpg",       
         detail: "Premium Comfort",
         // description:
         //   "Relax in a spacious, thoughtfully designed room for a comfortable ashram stay.",
@@ -31,8 +30,7 @@ const roomCategories = [
       {
         id: 2,
         name: "Super Deluxe Kitchen Room",
-        image: "/assets/images/super-deluxe-rooms/2.jpg",
-        guests: "2–3 Guests",
+        image: "/assets/images/super-deluxe-rooms/2.jpg",        
         detail: "Premium Comfort",
         // description:
         //   "Enjoy a restful atmosphere and a welcoming space surrounded by tranquillity.",
@@ -40,8 +38,7 @@ const roomCategories = [
       {
         id: 3,
         name: "Super Deluxe Double Bedroom",
-        image: "/assets/images/super-deluxe-rooms/3.jpg",
-        guests: "Up to 4 Guests",
+        image: "/assets/images/super-deluxe-rooms/3.jpg",        
         detail: "Family Comfort",
         // description:
         //   "A comfortable accommodation option for families visiting the ashram.",
@@ -49,8 +46,7 @@ const roomCategories = [
       {
         id: 4,
         name: "Super Deluxe Bathroom",
-        image: "/assets/images/super-deluxe-rooms/4.jpg",
-        guests: "Up to 4 Guests",
+        image: "/assets/images/super-deluxe-rooms/4.jpg",        
         detail: "Family Comfort",
         // description:
         //   "Enjoy a peaceful and comfortable room during your visit to the ashram.",
@@ -58,8 +54,7 @@ const roomCategories = [
       {
         id: 5,
         name: "Super Deluxe Family Room",
-        image: "/assets/images/super-deluxe-rooms/5.jpg",
-        guests: "Up to 4 Guests",
+        image: "/assets/images/super-deluxe-rooms/5.jpg",       
         detail: "Family Comfort",
         // description:
         //   "Relax in a welcoming space designed for a restful stay.",

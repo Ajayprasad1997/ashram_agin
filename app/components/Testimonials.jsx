@@ -3,7 +3,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { SiBookingdotcom } from "react-icons/si";
+import { SiAirbnb, SiBookingdotcom } from "react-icons/si";
 import { ArrowUpRight, Star } from "lucide-react";
 
 const reviews = [
@@ -18,8 +18,19 @@ const reviews = [
     review:
       "Calm, peaceful, comfortable and clean with excellent staff members who are very helpful.",
   },
-  {
+    {
     id: 2,
+    name: "Ruslans",
+    country: "Latvia",
+    countryCode: "LV",
+    initials: "V",
+    date: "2 months ago",
+    rating: 5,
+    review:
+      "There’s no place like this anywhere else. Peaceful oasis in a quite dynamic area. It is real Indian asram with traditional architecture, modern options, temple inside the property and cowshed goshala. Very cozy , well guarded, monkey proof facility! Sometimes I spent the whole day inside. Everything Vrindavan is famous for available at the spot)",
+  },
+  {
+    id: 3,
     name: "Letitia",
     country: "United Kingdom",
     countryCode: "GB",
@@ -30,10 +41,10 @@ const reviews = [
       "very friendly, polite, helpful and respectful staff.very calm ands contemplative atmoshere the mandir was peaceful the location was near and accessible to the main temples",
   },
   {
-    id: 3,
+    id: 4,
     name: "Sita",
     country: "India",
-    country: "Netherlands",
+    country: "IN",
     countryCode: "NL",
     initials: "P",
     date: "1 month ago",
@@ -42,7 +53,7 @@ const reviews = [
       "This place was amazing! The people are very nice and helpful. The place gives you very good vibes and it's very peaceful. It's also close to many sacred places. I definitely recommend this place, it gives you really local vibes. Especially if you want some peace this is the best place. They even arrange a taxi for you from the airport or if you want to travel around.",
   },
   {
-    id: 4,
+    id: 5,
     name: "Mick",
     country: "Australia",
     countryCode: "AU",
@@ -53,7 +64,7 @@ const reviews = [
       "Vrindavan is a very busy city so Shree Krishna is a quiet sanctuary but still close to all the attractions.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Robin",
     country: "Netherlands",
     countryCode: "NL",
@@ -64,7 +75,19 @@ const reviews = [
       "Great stay. I felt very safe and comfortable there, nice spacious rooms and people. Met a nice German Woman who was also staying there, to do things with. I def recommend the place.",
   },
   {
-    id: 6,
+    id: 7,
+    name: "Vikram",
+    country: "India",
+    countryCode: "IN",
+    initials: "R",
+    date: "2 months ago",
+    rating: 5,
+    review:
+      "It was a peaceful stay at Shree Krishna Bhakti Ashram. Host are very helpful and friendly especially Tej Prakash. Everything was as per the description. Highly recommend.",
+  },
+  
+  {
+    id: 8,
     name: "Laura",
     country: "Albania",
     countryCode: "AL",
@@ -74,6 +97,52 @@ const reviews = [
     review:
       "Location is great. Staff really helpful for every question and issues we had. Really clean place for Vrindavan standards.",
   },
+  {
+    id: 9,
+    name: "Vivek",
+    country: "India",
+    countryCode: "IN",
+    initials: "V",
+    date: "2 months ago",
+    rating: 5,
+    review:
+      "I would like to thank Mr Tej Prakash & Mr Milan Bhattacharji who help maintain this accommodation very nicely. There are limited number of rooms but the area is very peaceful. It is for people with a different taste in decor.",
+  },
+    {
+    id: 10,
+    name: "Abhishek T.",
+    country: "India",
+    countryCode: "IN",
+    initials: "V",
+    date: "2 months ago",
+    rating: 5,
+    review:
+      "Excellent location of hotel. Prem Mandir, Shri Banke bihari temple and ISKON temple, all are within walking distance. Can easily get auto to anywhere from outside the hotel. Rooms are also clean. Hotel owner is also very nice",
+  },
+   {
+    id: 11,
+    name: "Meenu B.",
+    country: "India",
+    countryCode: "IN",
+    initials: "V",
+    date: "2 months ago",
+    rating: 5,
+    review:
+      "Good experience peaceful place near to temple good staff room was near and clean Neat",
+  },
+  {
+    id: 12,
+    name: "Manish Jha",
+    country: "India",
+    countryCode: "IN",
+    initials: "V",
+    date: "2 months ago",
+    rating: 5,
+    review:
+      "We're pleased that you enjoyed your stay with us, thank you very much. We hope to have the opportunity to host you again in the future. Radhe Radhe",
+  },
+
+  
 ];
 
 const avatars = [
@@ -236,7 +305,7 @@ export default function Testimonials() {
             <h2 className="text-3xl font-bold leading-tight text-[#244584] sm:text-4xl md:text-5xl" data-aos="fade-up"
               data-aos-delay="100">
               Guest
-              <span className="block text-[#fdbb00]">
+              <span className="ml-3 text-[#fdbb00]">
                  Feedback
               </span>
             </h2>
@@ -267,11 +336,11 @@ export default function Testimonials() {
                   </span>
 
                   <div className="mt-1 text-dark font-extrabold leading-none text-neutral-900">
-                    4.9 / 5
+                    4.6 / 5
                   </div>
 
                   <p className="mt-0.5 text-[10px] text-neutral-400">
-                    75 votes
+                    75 Votes
                   </p>
                 </div>
 
@@ -296,11 +365,140 @@ export default function Testimonials() {
                   </span>
 
                   <div className="mt-1 text-dark font-extrabold leading-none text-neutral-900">
-                    9.1 / 9.6
+                    9.2 / 10
                   </div>
 
                   <p className="mt-0.5 text-[10px] text-neutral-400">
-                    187 stays
+                    187 Stays
+                  </p>
+                </div>
+
+                <ArrowUpRight
+                  size={13}
+                  className="self-start text-neutral-400 transition-colors group-hover:text-neutral-700"
+                />
+              </a>
+              {/* Airbnb */}
+              <a
+                href="https://www.airbnb.co.in/rooms/820116364740857161?check_in=2026-11-27&check_out=2026-11-28&search_mode=regular_search&source_impression_id=p3_3d1f5838-551c-469d-8235-36e9f9e08909_e00d9bf7-c1fc-4b04-9bfc-83ba0bbeb4d5_0_820116364740857161_1&previous_page_section_name=1000&federated_search_id=3d1f5838-551c-469d-8235-36e9f9e08909"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex cursor-pointer items-center justify-between rounded-lg border border-neutral-100 bg-neutral-50/50 p-2.5 text-left transition-colors hover:bg-neutral-50"
+              >
+                <div className="flex flex-col">
+
+                  <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-neutral-400">
+                    <SiAirbnb size={20} color="#FF5A5F" aria-hidden="true" />
+                    Airbnb
+                  </span>
+
+                  <div className="mt-1 text-dark font-extrabold leading-none text-neutral-900">
+                    4.9 / 5
+                  </div>
+
+                  <p className="mt-0.5 text-[10px] text-neutral-400">
+                    12 Votes
+                  </p>
+                </div>
+
+                <ArrowUpRight
+                  size={13}
+                  className="self-start text-neutral-400 transition-colors group-hover:text-neutral-700"
+                />
+              </a>
+
+              {/* Agoda */}
+              <a
+                href="https://www.agoda.com/shree-krishna-bhakti-ashram-h37221655/hotel/vrindavan-in.html?selectedproperty=44923275&checkIn=2026-11-29&los=1&rooms=1&adults=2&childs=0&cid=1922885&locale=en-us&ckuid=b250fe47-281b-4d84-95ba-22d704141e93&prid=0&gclid=Cj0KCQiA2frXBhC_ARIsAPTFcdOvrPKLLDKS2MN_WKYj4u9IyMxOnbJcjZL9Q-qZB8NlfnXJ74vl41AaAn7REALw_wcB&currency=INR&correlationId=5816709c-3322-4ac6-8b51-e67b35d45fd0&analyticsSessionId=-570500493536272013&pageTypeId=103&realLanguageId=1&languageId=1&origin=IN&stateCode=BR&tag=6f147157-60b8-459f-af1a-9935d44970e9&userId=b250fe47-281b-4d84-95ba-22d704141e93&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-us&cultureInfoName=en-us&machineName=sg-pc-6f-cronos-spa-acm-web-784445df69-gjrs4&trafficGroupId=5&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Chrome&cdnDomain=agoda.net&checkOut=2026-11-30&children=0&priceCur=INR&textToSearch=Shree+Krishna+Bhakti+Ashram&productType=2&travellerType=1&familyMode=off&ds=dW%2FHxbzKsSxvkhbX"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex cursor-pointer items-center justify-between rounded-lg border border-neutral-100 bg-neutral-50/50 p-2.5 text-left transition-colors hover:bg-neutral-50"
+              >
+                <div className="flex flex-col">
+
+                  <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-neutral-400">
+                    <span
+                      className="flex h-5 w-5 items-center justify-center text-[15px] font-black leading-none text-[#d71920]"
+                      aria-hidden="true"
+                    >
+                      A
+                    </span>
+                    Agoda
+                  </span>
+
+                  <div className="mt-1 text-dark font-extrabold leading-none text-neutral-900">
+                    9.4 / 10
+                  </div>
+
+                  <p className="mt-0.5 text-[10px] text-neutral-400">
+                    From 3 Reviews
+                  </p>
+                </div>
+
+                <ArrowUpRight
+                  size={13}
+                  className="self-start text-neutral-400 transition-colors group-hover:text-neutral-700"
+                />
+              </a>
+              {/* MakeMyTrip */}
+              <a
+                href="https://www.makemytrip.com/hotels/hotel-details/?checkin=11212026&checkout=11272026&city=CTVRIN&country=IN&locusId=CTVRIN&locusType=city&regionNearByExp=3&roomStayQualifier=2e0e&rsc=1e2e0e&searchText=Shree+Krishna+Bhakti+Ashram&topHtlId=202308071651305650&unified=true&hotelId=202308071651305650&_uCurrency=INR&lat=27.57344&lng=77.68344&rank=1&isPropSearch=T"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex cursor-pointer items-center justify-between rounded-lg border border-neutral-100 bg-neutral-50/50 p-2.5 text-left transition-colors hover:bg-neutral-50"
+              >
+                <div className="flex flex-col">
+
+                  <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-neutral-400">
+                    <span
+                      className="flex h-5 w-5 items-center justify-center text-[11px] font-black leading-none text-[#f15a24]"
+                      aria-hidden="true"
+                    >
+                      M
+                    </span>
+                    MakeMyTrip
+                  </span>
+
+                  <div className="mt-1 text-dark font-extrabold leading-none text-neutral-900">
+                    4.6 / 5
+                  </div>
+
+                  <p className="mt-0.5 text-[10px] text-neutral-400">
+                    83 Ratings
+                  </p>
+                </div>
+
+                <ArrowUpRight
+                  size={13}
+                  className="self-start text-neutral-400 transition-colors group-hover:text-neutral-700"
+                />
+              </a>
+
+              {/* Goibibo */}
+              <a
+                href="https://www.goibibo.com/hotels/hotel-details/?checkin=20261126&checkout=20261127&roomString=1-2-0&searchText=Shree%20Krishna%20Bhakti%20Ashram&locusId=CTVRIN&locusType=city&cityCode=CTVRIN&cc=IN&_uCurrency=INR&vcid=8380917408736610976&giHotelId=4242658332561239099&mmtId=202308071651305650#guest-reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex cursor-pointer items-center justify-between rounded-lg border border-neutral-100 bg-neutral-50/50 p-2.5 text-left transition-colors hover:bg-neutral-50"
+              >
+                <div className="flex flex-col">
+
+                  <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-neutral-400">
+                    <span
+                      className="flex h-5 w-5 items-center justify-center text-[13px] font-black leading-none text-[#f58220]"
+                      aria-hidden="true"
+                    >
+                      g
+                    </span>
+                    Goibibo
+                  </span>
+
+                  <div className="mt-1 text-dark font-extrabold leading-none text-neutral-900">
+                    4.9 / 5
+                  </div>
+
+                  <p className="mt-0.5 text-[10px] text-neutral-400">
+                    9 Votes
                   </p>
                 </div>
 
@@ -346,7 +544,7 @@ export default function Testimonials() {
                 </div>
 
                 <span className="mt-0.5 text-[12px] font-medium tracking-tight text-neutral-500">
-                  from 262 reviews
+                  from 369 reviews
                 </span>
               </div>
             </div>
@@ -497,9 +695,9 @@ export default function Testimonials() {
                           {"★".repeat(review.rating)}
                         </div>
 
-                        <p className="mt-1 text-[12px] text-gray-400">
+                        {/* <p className="mt-1 text-[12px] text-gray-400">
                           {review.date}
-                        </p>
+                        </p> */}
                       </div>
                     </div>
 
@@ -529,10 +727,7 @@ export default function Testimonials() {
                     </button>
 
                     {/* Card label */}
-                    <div className="absolute bottom-5 right-5 flex items-center gap-1 text-[12px] font-semibold text-[#244584]">
-                      <span className="text-[#fdbb00]">✦</span>
-                      Guest Experience
-                    </div>
+                    
                   </div>
                 </div>
               );

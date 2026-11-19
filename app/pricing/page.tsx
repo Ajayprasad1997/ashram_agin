@@ -161,7 +161,7 @@ function SeasonCard({
           <BedDouble size={19} className="text-[#FFB900]" />
 
           <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#244584]">
-            Room Tariff Details
+            Room Occupancy Charges
           </h4>
         </div>
 

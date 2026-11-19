@@ -199,6 +199,7 @@ const facilities = [
   "The Ashram also has a goshala (cow shelter), prayer rooms, a drinking-water facility (piyau), and provisions for anna khetra and satsang.",
   "Being a ground-floor property, it is also suitable for elderly guests.",
   "Spacious hall and garden adjacent to the temple, ideal for religious ceremonies and social functions.",
+  "Driver's accommodation can be provided at an additional charge.",
   "24/7 power backup for uninterrupted convenience.",
 ];
 

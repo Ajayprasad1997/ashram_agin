@@ -188,7 +188,7 @@ export default function EventsPage() {
             <div className="absolute -right-4 -top-4 h-32 w-32 rounded-full border-[15px] border-[#FFB900]/20" />
 
             <img
-              src="/assets/images/plc2.jpg"
+              src="/assets/images/tpr.jpg"
               alt="Spiritual activities at Shree Krishna Bhakti Ashram"
               className="relative z-10 h-[330px] w-full rounded-[28px] object-cover shadow-xl md:h-[440px]"
             />

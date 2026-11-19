@@ -39,23 +39,14 @@ const socialLinks = [
   {
     name: "Facebook",
     icon: FaFacebookF,
-    href: "#",
+    href: "https://www.facebook.com/profile.php?id=61572344104721",
   },
   {
     name: "Instagram",
     icon: FaInstagram,
-    href: "#",
+    href: "https://www.instagram.com/shreekrishnabhaktiashram/",
   },
-  {
-    name: "YouTube",
-    icon: FaYoutube,
-    href: "#",
-  },
-  {
-    name: "Twitter / X",
-    icon: FaXTwitter,
-    href: "#",
-  },
+  
 ];
 
 export default function Footer() {
@@ -112,7 +103,9 @@ export default function Footer() {
               <p className="text-sm leading-6 text-gray-400">
                 Shree Krishna Bhakti Ashram
                 <br />
-                Vrindavan, Uttar Pradesh, India
+                Bhaktivedanta Swami Marg (Ramanreti Marg)
+                Vrindaban – 281121
+
               </p>
             </div>
 

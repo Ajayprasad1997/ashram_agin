@@ -471,10 +471,10 @@ function FacilitiesArcShowcaseSection({ facilities = [] }) {
   "/assets/images/gallery1.jpg",
   "/assets/images/tpr.jpg",
   "/assets/images/temple-hall/4.jpg",
-  "https://webfiles.amrita.edu/2024/12/amrita-sdg-6-free-drinking-water-img1.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYSJYXxlEgd8ckbF1Nj441iGBCTm4dV8Kr1w4MSpzZA&s",
   "/assets/images/about3.jpg",
   "/assets/images/about1.jpg",
-  "https://clampera.com/assets/portfolio-2-CAHx4Z41.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB50Q2k7cxemwDmcd0BVJY4m5KhPIHcJcHeJ9MZwROZGOfen4HshGG5tQ&s",
 ];
 
   // Responsive layout
@@ -732,7 +732,7 @@ function FacilitiesArcShowcaseSection({ facilities = [] }) {
                     />
 
                     {isCenter && item.description && (
-                      <p className="mt-2 line-clamp-2 text-[10px] leading-5 text-white/80 sm:text-xs">
+                      <p className="mt-2 line-clamp-2 text-[10px] text-[#fdbb00] md:text-[13px]">
                         {item.description}
                       </p>
                     )}
@@ -815,9 +815,9 @@ const facilities = [
   },
   {
     icon: Church,
-    title: "Temple & Prayer Rooms",
+    title: "Temple & Prayers Hall",
     description:
-      "A temple within the premises, dedicated prayer rooms and spaces for spiritual activities.",
+      "A temple within the premises, dedicated Prayers Hall and spaces for spiritual activities.",
   },
   {
     icon: Heart,
@@ -845,7 +845,7 @@ const facilities = [
   },
   {
     icon: Wifi,
-    title: "WIFI",
+    title: "High-Speed Wi-Fi",
     description:
       "Enjoy seamless high-speed Wi-Fi connectivity throughout your stay.",
   },
@@ -862,6 +862,8 @@ const facilities = [
 // ==========================================
 
 const attractions = [
+  { name: "Radharaman Bihari Temple", distance: "Nearby" },
+  { name: "Keli Kunj", distance: "Nearby" },
   { name: "Shri Banke Bihari Temple", distance: "1 km" },
   { name: "Radha Ballabh Mandir", distance: "1 km" },
   { name: "ISKCON Temple", distance: "0.75 km" },
