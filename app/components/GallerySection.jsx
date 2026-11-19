@@ -210,9 +210,9 @@ useEffect(() => {
                     <img src={galleryStates[currentState].leftImg.src} alt="Gallery" className="h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/25" />
                   </div>
-                  <div className="absolute bottom-4 left-4 text-xs text-white font-medium tracking-wide drop-shadow-sm">
+                  {/* <div className="absolute bottom-4 left-4 text-xs text-white font-medium tracking-wide drop-shadow-sm">
                     {galleryStates[currentState].leftImg.label}
-                  </div>
+                  </div> */}
                 </div>
 
                 <div 
@@ -223,9 +223,9 @@ useEffect(() => {
                     <img src={galleryStates[currentState].bottomLeftImg.src} alt="Gallery" className="h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/25" />
                   </div>
-                  <div className="absolute bottom-4 left-4 text-xs text-white font-medium tracking-wide drop-shadow-sm">
+                  {/* <div className="absolute bottom-4 left-4 text-xs text-white font-medium tracking-wide drop-shadow-sm">
                     {galleryStates[currentState].bottomLeftImg.label}
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -276,9 +276,9 @@ useEffect(() => {
                     <img src={galleryStates[currentState].rightImg.src} alt="Gallery" className="h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/25" />
                   </div>
-                  <div className="absolute bottom-4 left-4 text-xs text-white font-medium tracking-wide drop-shadow-sm">
+                  {/* <div className="absolute bottom-4 left-4 text-xs text-white font-medium tracking-wide drop-shadow-sm">
                     {galleryStates[currentState].rightImg.label}
-                  </div>
+                  </div> */}
                 </div>
 
                 <div 
@@ -289,9 +289,9 @@ useEffect(() => {
                     <img src={galleryStates[currentState].bottomRightImg.src} alt="Gallery" className="h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/25" />
                   </div>
-                  <div className="absolute bottom-4 left-4 text-xs text-white font-medium tracking-wide drop-shadow-sm">
+                  {/* <div className="absolute bottom-4 left-4 text-xs text-white font-medium tracking-wide drop-shadow-sm">
                     {galleryStates[currentState].bottomRightImg.label}
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </AnimatePresence>
