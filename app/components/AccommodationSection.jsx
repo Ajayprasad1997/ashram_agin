@@ -128,13 +128,7 @@ const roomCategories = [
       //   guests: "Family Stay",
       //   detail: "Direct Enquiry",
       // },
-      {
-        id: 18,
-        name: "Deluxe Double Bedroom",
-        image: "/assets/images/diffrent-booking-sites/8.jpg",
-        guests: "Family Stay",
-        detail: "Family Comfort",
-      },
+      
       
     ],
   },

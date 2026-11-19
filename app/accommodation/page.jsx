@@ -106,16 +106,7 @@ const roomSections = [
         alt: "Deluxe single bedroom",
         caption: "Single Bedroom",
       },
-      {
-        src: "assets/images/db/4.jpg",
-        alt: "Deluxe single bedroom interior",
-        caption: "Single Bedroom",
-      },
-      {
-        src: "assets/images/db/5.jpg",
-        alt: "Deluxe double bedroom",
-        caption: "Double Bedroom",
-      },
+     
       {
         src: "assets/images/db/6.jpg",
         alt: "Deluxe double bedroom interior",
@@ -126,11 +117,7 @@ const roomSections = [
         alt: "Deluxe double bedroom",
         caption: "Double Bedroom",
       },
-      {
-        src: "assets/images/db/8.jpg",
-        alt: "Deluxe double bedroom interior",
-        caption: "Double Bedroom",
-      },
+      
       {
         src: "assets/images/db/9.jpg",
         alt: "Deluxe double bedroom",
