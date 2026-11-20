@@ -158,7 +158,7 @@ export default function AboutAshram() {
         retreat rooted in years of quiet devotion and family tradition.
       </p>
 
-      <p
+      <p className="font-semibold text-gray-800"
         data-aos="fade-up"
         data-aos-delay="300"
       >
@@ -167,7 +167,7 @@ export default function AboutAshram() {
         serenity, and spiritual atmosphere.
       </p>
 
-      <p
+      <p className="font-semibold text-gray-800"
         data-aos="fade-up"
         data-aos-delay="400"
       >
@@ -198,7 +198,7 @@ export default function AboutAshram() {
       data-aos-delay="500"
     >
  <Link
-        href="/accommodation"
+        href="/about"
         className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#244584] px-7 text-xs font-bold uppercase tracking-wide text-white transition duration-300 hover:bg-[#fdbb00] hover:text-[#244584]"
       >
          <BookOpen size={16} />
