@@ -49,7 +49,7 @@ export default function ContactSection() {
             <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:mt-24">
               <div>
                 <h4 className="text-[16px] font-bold uppercase tracking-wider text-[#fdbb00]">Location</h4>
-                <div className="mt-3 text-[15px] font-light leading-6 text-gray-300">
+                <div className="mt-3 text-[15px] font-light leading-6 text-[#fff]">
                   <p>Shree Krishna Bhakti Ashram</p>
                   <p>123 Serenity Bay Road</p>
                   <p>Vrindavan, India 281121</p>
@@ -59,25 +59,59 @@ export default function ContactSection() {
 
               <div>
                 <h4 className="text-[16px] font-bold uppercase tracking-wider text-[#fdbb00]">Social Media</h4>
-                <div className="mt-3 flex flex-col gap-2 text-[15px] font-light text-gray-300">
-                  {['Instagram', 'LinkedIn', 'Facebook', 'Google Review'].map((platform) => (
-                    <a key={platform} href="#" className="transition hover:text-[#fdbb00] w-fit">{platform}</a>
+                <div className="mt-3 flex flex-col gap-2 text-[15px] font-light text-white">
+                  {[
+                    {
+                      name: "Instagram",
+                      link: "https://www.instagram.com/shreekrishnabhaktiashram/",
+                    },
+                    {
+                      name: "Facebook",
+                      link: "https://www.facebook.com/profile.php?id=61572344104721",
+                    },
+                    {
+                      name: "Google Review",
+                      link: "https://www.google.com/search?kgmid=/g/11c529r4st&hl=en-IN&q=Shree+Krishna+Bhakti+Ashram&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/osrp/m1/2&kgs=31317842a6481b1e&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/osrp/m1/2",
+                    },
+                  ].map((platform) => (
+                    <a
+                      key={platform.name}
+                      href={platform.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-fit transition hover:text-[#fdbb00]"
+                    >
+                      {platform.name}
+                    </a>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h4 className="text-[16px] font-bold uppercase tracking-wider text-[#fdbb00]">Email</h4>
-                <p className="mt-3 text-[15px] font-light text-gray-300 transition hover:text-[#fdbb00]">
-                  <a href="mailto:stay@ashramresort.com">stay@ashramresort.com</a>
-                </p>
+                <h4 className="text-[16px] font-bold uppercase tracking-wider text-[#fff]">Email</h4>
+                <a
+                    href="mailto:skbhaktiashram@gmail.com"
+                    className="mt-3 inline-block break-all text-sm font-light text-[#fff] transition hover:text-[#fdbb00]"
+                  >
+                    skbhaktiashram@gmail.com
+                  </a>
               </div>
 
               <div>
                 <h4 className="text-[16px] font-bold uppercase tracking-wider text-[#fdbb00]">Contact</h4>
-                <p className="mt-3 text-[15px] font-semibold text-gray-300 tracking-wide">
-                  +91 8583017971
-                </p>
+                <a
+                    href="tel:+919748088819"
+                    className="mt-3 inline-block text-sm font-semibold tracking-wide text-[#fff] transition hover:text-[#fdbb00]"
+                  >
+                    +91 9748088819
+                  </a>
+                  <br />
+                  <a
+                    href="tel:+919286806006"
+                    className="mt-3 inline-block text-sm font-semibold tracking-wide text-[#fff] transition hover:text-[#fdbb00]"
+                  >
+                    +91 9286806006
+                  </a>
               </div>
             </div>
           </div>
