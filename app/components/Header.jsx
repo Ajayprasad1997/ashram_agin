@@ -131,7 +131,7 @@ export default function Header() {
 
       {/* Bottom navigation */}
       <div className="bg-[#FFF8ED] shadow-[0_6px_12px_rgba(0,0,0,0.12)]">
-        <div className="hidden min-[1300px]:flex mx-auto min-h-[56px] max-w-[1320px] items-center justify-between px-5 lg:px-8">
+        <div className="hidden min-[1300px]:flex mx-auto min-h-[56px] max-w-[1380px] items-center justify-between px-5 lg:px-8">
           {/* Desktop navigation */}
           <nav
             className="hidden items-center gap-5 min-[1300px]:flex xl:gap-6"
@@ -189,10 +189,10 @@ export default function Header() {
   <li className="secondary flex items-center">
     <a 
       className="flex font-bold items-center gap-2 text-[16px] text-[#4B4037] transition hover:text-[#B96B25]" 
-      href="mailto:info@ashram.com"
+      href="mailto:skbhaktiashram@gmail.com"
     >
       <span className="flex items-center text-[16px] text-[#4B4037] hover:text-[#B96B25]"><MdEmail /></span>  
-      info@ashram.com
+      skbhaktiashram@gmail.com
     </a>
   </li>
 
@@ -200,10 +200,10 @@ export default function Header() {
   <li className="secondary flex items-center">
     <a 
       className="font-bold flex items-center gap-2 telnav text-[16px] text-[#4B4037] transition hover:text-[#B96B25]" 
-      href="tel:+9286806006"
+      href="tel:+919748088819"
     >
       <span className="flex items-center text-[16px] text-[#4B4037] hover:text-[#B96B25]"><FaPhone /></span>
-      +91 9286806006
+      +91 9748088819
     </a>
   </li>
   <li>

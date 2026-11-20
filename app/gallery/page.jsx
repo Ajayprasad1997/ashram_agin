@@ -68,14 +68,20 @@ const galleryCategories = [
     id: "Premium",
     label: "Premium Rooms",
     images: [
-      "/assets/images/deluxe-booking-sites/1.jpg",
-      "/assets/images/deluxe-booking-sites/11.jpg",
-      "/assets/images/deluxe-booking-sites/room3.jpg",
+      "/assets/images/deluxe-booking-sites/p1.jpg",
+       "/assets/images/deluxe-booking-sites/pr1-1.jpg",
+          "/assets/images/deluxe-booking-sites/pr-no2.jpg",
+       "/assets/images/deluxe-booking-sites/pr-no2-1.jpg",      
+      "/assets/images/deluxe-booking-sites/pr3.jpg",
+      "/assets/images/deluxe-booking-sites/pr3-1.jpg",
       
     ],
     captions: [
       "Room No. 1",
+      "Room No. 1",
       "Room No. 2",
+      "Room No. 2",
+      "Room No. 3",
       "Room No. 3",     
       
     ],
@@ -96,15 +102,15 @@ const galleryCategories = [
       
     ],
     captions: [
-      "Holi",
+      "",
       "Chilling Outside",
       "Holi",
       "Holi",
       "Chilling Outside",
-      "A Happy Evening",
+      "A Happy Morning",
       "Bonfire",
-      "A Happy Evening",
-      "Bonfire",
+      "Chilling Outside",
+      "Guest",
       
     ],
   },

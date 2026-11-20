@@ -61,15 +61,13 @@ const spiritualActivities = [
     subtitle: "Devotional Music",
     description:
       "Experience the joy of devotional songs and spiritual chanting.",
-    image: "/assets/images/bhajan.jpg",
     number: "01",
   },
   {
-    title: "Meditation",
-    subtitle: "Inner Peace",
+    title: "Meditation (Pre-Arranged)",
+    subtitle: "By Prior Arrangement",
     description:
-      "Take a peaceful moment for reflection, mindfulness, and spiritual connection.",
-    image: "/assets/images/bhajan.jpg",
+      "Enjoy a peaceful meditation experience through prior arrangements with the ashram.",
     number: "02",
   },
   {
@@ -77,7 +75,6 @@ const spiritualActivities = [
     subtitle: "Satsang & Devotion",
     description:
       "Discover opportunities to participate in spiritual and religious activities.",
-    image: "/assets/images/bhajan.jpg",
     number: "03",
   },
 ];
@@ -726,53 +723,39 @@ export default function EventsPage() {
               </p>
             </div>
           </div>
+<div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+  {spiritualActivities.map((activity, index) => (
+    <article
+      key={activity.number}
+      data-aos="fade-up"
+      data-aos-delay={index * 150}
+      className="group relative min-h-[320px] overflow-hidden rounded-[26px] bg-transparent text-[#244584] shadow-none transition-all duration-500 md:bg-gradient-to-r md:from-[#D99024] md:via-[#B96B25] md:to-[#82451F] md:text-white md:shadow-lg"
+    >
+      {/* Number */}
+      <div className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-[#D99024]/40 bg-[#D99024]/10 text-sm font-bold text-[#B96B25] transition-all duration-500 group-hover:rotate-12 md:border-white/40 md:bg-white/10 md:text-white md:backdrop-blur-md">
+        {activity.number}
+      </div>
 
-          <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {spiritualActivities.map((activity, index) => (
-              <article
-                key={activity.number}
-                data-aos="fade-up"
-                data-aos-delay={index * 150}
-                className="group relative min-h-[390px] overflow-hidden rounded-[26px] bg-[#14233F] shadow-lg"
-              >
-                <img
-                  src={activity.image}
-                  alt={activity.title}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
+      {/* Content */}
+      <div className="flex h-full min-h-[320px] flex-col justify-end p-7 transition-transform duration-500 md:group-hover:-translate-y-2">
+        <span className="text-xs font-bold uppercase tracking-[3px] text-[#B96B25] md:text-[#FFCA45]">
+          {activity.subtitle}
+        </span>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C1B36] via-[#0C1B36]/35 to-transparent transition-all duration-500 group-hover:from-[#102B58]/95" />
+        <h3 className="mt-3 text-2xl font-bold md:text-3xl">
+          {activity.title}
+        </h3>
 
-                <div className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm font-bold text-white backdrop-blur-md">
-                  {activity.number}
-                </div>
+        <p className="mt-3 max-w-sm text-sm leading-7 text-[#475569] md:text-white/85">
+          {activity.description}
+        </p>
 
-                <div className="absolute bottom-0 left-0 w-full p-7 text-white transition-transform duration-500 group-hover:-translate-y-2">
-                  <span className="text-xs font-bold uppercase tracking-[3px] text-[#FFCA45]">
-                    {activity.subtitle}
-                  </span>
-
-                  <h3 className="mt-3 text-2xl font-bold md:text-3xl">
-                    {activity.title}
-                  </h3>
-
-                  <p className="mt-3 max-w-sm text-sm leading-7 text-white/80">
-                    {activity.description}
-                  </p>
-
-                  <div className="mt-5 flex items-center gap-2 text-sm font-bold text-[#FFCA45]">
-                    <span>Explore Activities</span>
-                    <ArrowUpRight
-                      size={18}
-                      className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                    />
-                  </div>
-
-                  <div className="mt-5 h-[2px] w-10 bg-[#FFB900] transition-all duration-500 group-hover:w-full" />
-                </div>
-              </article>
-            ))}
-          </div>
+        {/* Bottom Accent Line */}
+        <div className="mt-6 h-[3px] w-12 rounded-full bg-[#D99024] transition-all duration-500 group-hover:w-full md:bg-[#FFB900]" />
+      </div>
+    </article>
+  ))}
+</div>
         </div>
       </section>
 

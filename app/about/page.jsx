@@ -184,7 +184,7 @@ function AboutThreeColumnSection() {
           </h2>
 
           {/* INTRODUCTION */}
-          <div className="mt-6 space-y-4 text-sm leading-7 text-gray-600">
+          <div className="mt-6 space-y-4 text-sm leading-7 text-gray-800">
 
             <p
               className="font-semibold text-gray-800"
@@ -195,7 +195,7 @@ function AboutThreeColumnSection() {
               retreat rooted in years of quiet devotion and family tradition.
             </p>
 
-            <p
+            <p className="font-semibold text-gray-800"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -204,7 +204,7 @@ function AboutThreeColumnSection() {
               serenity, and spiritual atmosphere.
             </p>
 
-            <p
+            <p className="font-semibold text-gray-800"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -410,7 +410,7 @@ function AboutThreeColumnSection() {
               Authentic Culture and Charm, Where Beauty Knows No Bounds
             </h3>
 
-            <p className="mt-4 text-[15px] leading-8 text-[#737F91]">
+            <p className="mt-4 text-[15px] leading-8 text-gray-800">
               The property offers a serene atmosphere, spacious
               rooms, a well-maintained garden, and a temple within
               the premises.
@@ -466,15 +466,13 @@ function FacilitiesArcShowcaseSection({ facilities = [] }) {
   // Facility images
   const facilityImages = [
   "/assets/images/sd/1.jpg",
-  "/assets/images/sd/5.jpg",
-  "/assets/images/sd/2.jpg",
   "/assets/images/gallery1.jpg",
   "/assets/images/tpr.jpg",
-  "/assets/images/temple-hall/4.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYSJYXxlEgd8ckbF1Nj441iGBCTm4dV8Kr1w4MSpzZA&s",
+  "/assets/images/temple-hall/4.jpg", 
   "/assets/images/about3.jpg",
   "/assets/images/about1.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB50Q2k7cxemwDmcd0BVJY4m5KhPIHcJcHeJ9MZwROZGOfen4HshGG5tQ&s",
+  "/assets/images/dr/4.jpg"
+  
 ];
 
   // Responsive layout
@@ -495,7 +493,7 @@ function FacilitiesArcShowcaseSection({ facilities = [] }) {
 
     const interval = setInterval(() => {
       setActiveIndex((prev) => prev + 1);
-    }, 1500);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, [isPaused, isDragging, totalItems]);
@@ -795,18 +793,13 @@ const facilities = [
     description:
       "Spacious, air-conditioned rooms with heating facilities for comfortable stays during colder months.",
   },
-  {
-    icon: Bath,
-    title: "Private Bathrooms",
-    description:
-      "Attached private bathrooms, comfortable seating areas, wardrobes and dressing areas in selected rooms.",
-  },
-  {
-    icon: Refrigerator,
-    title: "Kitchen Facilities",
-    description:
-      "Selected rooms feature a compact kitchen and mini refrigerator for additional convenience.",
-  },
+ 
+  // {
+  //   icon: Refrigerator,
+  //   title: "Kitchen Facilities",
+  //   description:
+  //     "Selected rooms feature a compact kitchen and mini refrigerator for additional convenience.",
+  // },
   {
     icon: Trees,
     title: "Garden & Open Spaces",
@@ -825,12 +818,12 @@ const facilities = [
     description:
       "The Ashram has a goshala (cow shelter) and provisions for anna kshetra, offering free food distribution.",
   },
-  {
-    icon: Droplets,
-    title: "Drinking Water Facility",
-    description:
-      "A dedicated piyau provides drinking-water facilities within the Ashram premises.",
-  },
+  // {
+  //   icon: Droplets,
+  //   title: "Drinking Water Facility",
+  //   description:
+  //     "A dedicated piyau provides drinking-water facilities within the Ashram premises.",
+  // },
   {
     icon: Users,
     title: "Spacious Hall & Garden",
@@ -843,12 +836,12 @@ const facilities = [
     description:
       "The ground-floor layout makes the property suitable for elderly guests and those who prefer easy accessibility.",
   },
-  {
-    icon: Wifi,
-    title: "High-Speed Wi-Fi",
-    description:
-      "Enjoy seamless high-speed Wi-Fi connectivity throughout your stay.",
-  },
+  // {
+  //   icon: Wifi,
+  //   title: "High-Speed Wi-Fi",
+  //   description:
+  //     "Enjoy seamless high-speed Wi-Fi connectivity throughout your stay.",
+  // },
   {
     icon: Zap,
     title: "24/7 Power Backup",
@@ -862,7 +855,7 @@ const facilities = [
 // ==========================================
 
 const attractions = [
-  { name: "Radharaman Bihari Temple", distance: "Nearby" },
+  { name: "Radharaman Temple", distance: "Nearby" },
   { name: "Keli Kunj", distance: "Nearby" },
   { name: "Shri Banke Bihari Temple", distance: "1 km" },
   { name: "Radha Ballabh Mandir", distance: "1 km" },
