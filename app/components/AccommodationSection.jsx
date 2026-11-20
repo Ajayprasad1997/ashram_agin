@@ -135,8 +135,8 @@ const roomCategories = [
     rooms: [
       {
         id: 20,
-        name: "Deluxe Room",
-        image: "/assets/images/deluxe-booking-sites/1.jpg",
+        name: "Premium Room 1",
+        image: "/assets/images/deluxe-booking-sites/proom1.jpg",
         guests: "2 Guests",
         detail: "Online Listing",
         // description:
@@ -147,8 +147,8 @@ const roomCategories = [
       
       {
         id: 22,
-        name: "Deluxe Double Bedroom",
-        image: "/assets/images/deluxe-booking-sites/3.jpg",
+        name: "Premium Room 2",
+        image: "/assets/images/deluxe-booking-sites/proom2.jpg",
         guests: "2–3 Guests",
         detail: "Online Listing",
         // description:
@@ -158,8 +158,8 @@ const roomCategories = [
       },
       {
         id: 23,
-        name: "Deluxe Stay Room",
-        image: "/assets/images/deluxe-booking-sites/11.jpg",
+        name: "Premium Room 3",
+        image: "/assets/images/deluxe-booking-sites/proom3.jpg",
         guests: "2–3 Guests",
         detail: "Online Listing",
         // description:
@@ -168,17 +168,7 @@ const roomCategories = [
         bookingSite: "View Booking Options",
       },
      
-      {
-        id: 24,
-        name: "Deluxe Double Bedroom",
-        image: "/assets/images/deluxe-booking-sites/6.jpg",
-        guests: "2–3 Guests",
-        detail: "Online Listing",
-        // description:
-        //   "Visit the relevant listing to review room details, prices, and booking conditions.",
-        bookingUrl: "",
-        bookingSite: "View Booking Options",
-      },
+      
     ],
   },
 ];
@@ -648,94 +638,25 @@ useEffect(() => {
                   <span className="pointer-events-none absolute left-5 top-5 rounded-full border border-white/35 bg-white/15 px-4 py-2 text-[10px] font-semibold tracking-wider text-white backdrop-blur-md">
                     {room.detail}
                   </span>
-
-                  {/* <div className="pointer-events-none absolute bottom-5 left-5 right-5 text-white">
-                    <h3 className="text-2xl font-semibold leading-tight sm:text-3xl">
-                      {room.name}
-                    </h3>
-                  </div> */}
                 </div>
 
                 {/* Room details */}
                 <div className="pt-5">
-                <div className="mb-1 flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                  <Users size={15} className="text-[#2c83a5]" />
+                <div className="mb-1 flex flex-wrap items-center gap-2 text-xs text-gray-800">
+                  <Users size={15} className="text-gray-800" />
                   {room.guests}
 
-                  <span className="mx-1 text-gray-300">|</span>
+                  <span className="mx-1 text-gray-800">|</span>
 
-                  <BedDouble size={15} className="text-[#2c83a5]" />
+                  <BedDouble size={15} className="text-gray-800" />
 
-                  {activeCategory.id === "super-deluxe"
+                      {activeCategory.id === "super-deluxe"
                     ? "Super Deluxe"
                     : activeCategory.id === "deluxe-direct"
                     ? "Deluxe Room"
-                    : "Premium Room"}
+                    : room.name}
                 </div>
 
-  {/* <p className="min-h-[72px] text-sm leading-6 text-gray-600">
-    {room.description}
-  </p> */}
-
-  {/* Booking action */}
-  {/* {activeCategory.id === "deluxe-online" ? (
-    room.bookingUrl ? (
-      <a
-        href={room.bookingUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        draggable={false}
-        onClick={(event) => {
-          if (dragRef.current.suppressClick) {
-            event.preventDefault();
-          }
-        }}
-        className="mt-2 inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-[#244584] px-6 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#fdbb00]"
-      >
-        {room.bookingSite}
-        <ExternalLink size={15} />
-      </a>
-    ) : (
-      <div className="mt-5 flex flex-wrap gap-3">
-        <Link
-          href="/contact"          
-          className="inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-[#244584] px-6 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#2c83a5]"
-        >
-          Enquire
-          <ArrowRight size={16} />
-        </Link>
-
-        <Link
-          href="/accommodation"                  
-          className="inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-[#244584] px-6 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#fdbb00]"
-        >
-          All Rooms
-          <ArrowRight size={16} />
-        </Link>
-      </div>
-    )
-  ) : ( */}
-    
-    {/* <>
-      <div className="mt-5 flex flex-wrap gap-3">
-        <Link
-          href="/contact"          
-          className="inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-[#244584] px-6 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#2c83a5]"
-        >
-          Enquire
-          <ArrowRight size={16} />
-        </Link>
-
-        <Link
-          href="/accommodation"                  
-          className="inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-[#244584] px-6 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#fdbb00]"
-        >
-          All Rooms
-          <ArrowRight size={16} />
-        </Link>
-      </div>
-    </>
-  )} */}
 </div>
 
               </motion.article>

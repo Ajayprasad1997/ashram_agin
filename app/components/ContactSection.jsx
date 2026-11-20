@@ -69,10 +69,10 @@ export default function ContactSection() {
                       name: "Facebook",
                       link: "https://www.facebook.com/profile.php?id=61572344104721",
                     },
-                    {
-                      name: "Google Review",
-                      link: "https://www.google.com/search?kgmid=/g/11c529r4st&hl=en-IN&q=Shree+Krishna+Bhakti+Ashram&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/osrp/m1/2&kgs=31317842a6481b1e&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/osrp/m1/2",
-                    },
+                    // {
+                    //   name: "Google Review",
+                    //   link: "https://www.google.com/search?kgmid=/g/11c529r4st&hl=en-IN&q=Shree+Krishna+Bhakti+Ashram&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/osrp/m1/2&kgs=31317842a6481b1e&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/osrp/m1/2",
+                    // },
                   ].map((platform) => (
                     <a
                       key={platform.name}
