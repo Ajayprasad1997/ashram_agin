@@ -74,6 +74,9 @@ body {
   padding-right: 12px;
 }
 
+@media (max-width: 991px) {
+
+}
 /* Mobile only */
 @media (max-width: 639px) {
   .accommodation-marquee-viewport {

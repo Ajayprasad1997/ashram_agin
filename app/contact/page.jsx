@@ -228,8 +228,8 @@ const handleSubmit = async (e) => {
 
                   <div className="mt-3 text-sm font-light leading-7 text-[#16222f]">
                     <p>Shree Krishna Bhakti Ashram</p>
-                    <p>123 Serenity Bay Road</p>
-                    <p>Vrindavan, India 281121</p>
+                    <p>Bhaktivedanta Swami Marg (Ramanreti Marg)</p>
+                    <p>Vrindaban – 281121</p>
 
                     <p className="mt-3 flex items-center gap-2 text-xs italic text-gray-400">
                       <Clock size={14} />
@@ -274,7 +274,7 @@ const handleSubmit = async (e) => {
                       Facebook
                       <ArrowUpRight size={13} />
                     </a>
-
+{/* 
                     <a
                       href="https://www.google.com/search?kgmid=/g/11c529r4st&hl=en-IN&q=Shree+Krishna+Bhakti+Ashram&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/osrp/m1/2&kgs=31317842a6481b1e&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/osrp/m1/2"
                       target="_blank"
@@ -284,7 +284,7 @@ const handleSubmit = async (e) => {
                       <Star size={15} />
                       Google Review
                       <ArrowUpRight size={13} />
-                    </a>
+                    </a> */}
 
                   </div>
                 </div>

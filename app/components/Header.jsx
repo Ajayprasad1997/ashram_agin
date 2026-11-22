@@ -120,7 +120,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="rounded-lg p-2 transition hover:bg-white/15 min-[1300px]:hidden"
+            className="rounded-lg p-2 transition hover:bg-white/15 min-[1199px]:hidden"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -131,10 +131,10 @@ export default function Header() {
 
       {/* Bottom navigation */}
       <div className="bg-[#FFF8ED] shadow-[0_6px_12px_rgba(0,0,0,0.12)]">
-        <div className="hidden min-[1300px]:flex mx-auto min-h-[56px] max-w-[1380px] items-center justify-between px-5 lg:px-8">
+        <div className="hidden min-[1199px]:flex mx-auto min-h-[56px] max-w-[1380px] items-center justify-between px-5 lg:px-8">
           {/* Desktop navigation */}
           <nav
-            className="hidden items-center gap-5 min-[1300px]:flex xl:gap-6"
+            className="hidden items-center gap-5 min-[1199px]:flex xl:gap-6"
             aria-label="Main navigation"
           >
             {navItems.map((item, index) => (
@@ -181,7 +181,7 @@ export default function Header() {
             </button>
           </nav>
 
-             <ul className="hidden min-[1300px]:flex top-bar-nav nav navbar-nav navbar-right flex-wrap items-center gap-6">
+             <ul className="hidden min-[1199px]:flex top-bar-nav nav navbar-nav navbar-right flex-wrap items-center gap-6">
   {/* Contact Us Button */}
   
 
@@ -225,7 +225,7 @@ export default function Header() {
         {/* Mobile navigation */}
         {mobileOpen && (
           <nav
-            className="max-h-[75vh] overflow-y-auto border-t border-gray-200 bg-white px-5 py-3 shadow-lg min-[1300px]:hidden"
+            className="max-h-[75vh] overflow-y-auto border-t border-gray-200 bg-white px-5 py-3 shadow-lg min-[1199px]:hidden"
             aria-label="Mobile navigation"
           >
             {navItems.map((item) => (
@@ -308,7 +308,7 @@ export default function Header() {
 
     {/* Desktop Navigation */}
     <nav
-      className="hidden items-center gap-5 min-[1300px]:flex xl:gap-7"
+      className="hidden items-center gap-5 min-[1199px]:flex xl:gap-7"
       aria-label="Sticky navigation"
     >
       {navItems.map((item) => (
@@ -328,7 +328,7 @@ export default function Header() {
     <button
       type="button"
       onClick={() => setStickyMobileOpen(!stickyMobileOpen)}
-      className="rounded-lg p-2 text-[#A84E2E] transition hover:bg-gray-100 min-[1300px]:hidden"
+      className="rounded-lg p-2 text-[#A84E2E] transition hover:bg-gray-100 min-[1199px]:hidden"
       aria-label={stickyMobileOpen ? "Close menu" : "Open menu"}
       aria-expanded={stickyMobileOpen}
     >
@@ -338,7 +338,7 @@ export default function Header() {
 
   {/* Mobile Navigation */}
   <div
-    className={`overflow-hidden border-t border-gray-100 bg-white transition-all duration-300 min-[1300px]:hidden ${
+    className={`overflow-hidden border-t border-gray-100 bg-white transition-all duration-300 min-[1199px]:hidden ${
       stickyMobileOpen
         ? "max-h-[400px] opacity-100"
         : "max-h-0 opacity-0"

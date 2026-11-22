@@ -51,8 +51,9 @@ export default function ContactSection() {
                 <h4 className="text-[16px] font-bold uppercase tracking-wider text-[#fdbb00]">Location</h4>
                 <div className="mt-3 text-[15px] font-light leading-6 text-[#fff]">
                   <p>Shree Krishna Bhakti Ashram</p>
-                  <p>123 Serenity Bay Road</p>
-                  <p>Vrindavan, India 281121</p>
+                 
+                  <p>Bhaktivedanta Swami Marg (Ramanreti Marg)</p>
+                  <p>Vrindaban – 281121</p>
                   <p className="mt-2 text-gray-300 italic">Monday–Sunday | 08:00 – 22:00 (local time)</p>
                 </div>
               </div>
