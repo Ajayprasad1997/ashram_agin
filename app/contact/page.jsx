@@ -155,7 +155,7 @@ const handleSubmit = async (e) => {
               comfortable and memorable.
             </p>
 
-            <div className="mt-8 flex items-center gap-3 text-sm text-white/80">
+            <div className="mt-3 md:mt-8 flex items-center gap-3 text-sm text-white/80">
               <Link href="/" className="transition hover:text-[#FFB900]">
                 Home
               </Link>

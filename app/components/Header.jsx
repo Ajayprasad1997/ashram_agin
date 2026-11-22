@@ -60,7 +60,7 @@ export default function Header() {
     <header className="absolute lg:relative top-0 left-0 z-50 w-full bg-transparent">
      
       {/* Top blue header */}
-      <div className="bg-transparent md:bg-gradient-to-r md:from-[#D99024] md:via-[#B96B25] md:to-[#82451F] text-white">
+      <div className="bg-transparent min-[992px]:bg-gradient-to-r min-[992px]:from-[#D99024] min-[992px]:via-[#B96B25] min-[992px]:to-[#82451F] text-white">
          
         <div className="mx-auto flex min-h-[85px] sm:min-h-[122px] max-w-[1320px] items-center justify-between gap-6 px-5 py-3 lg:px-8">
           
@@ -76,7 +76,7 @@ export default function Header() {
               className="h-[92px] w-[140px] shrink-0 object-contain mobile-logo"
             />
 
-            <div className="hidden border-l border-white/30 pl-5 sm:block">
+            <div className="hidden border-l border-white/30 pl-5 min-[991px]:block">
               <p className="mb-0.5 text-sm font-medium">
                 Welcome to the official website of
               </p>
@@ -91,30 +91,53 @@ export default function Header() {
 
           {/* Founder information */}
           <div className="hidden items-center gap-5 md:flex">
-            <div className="max-w-[260px] text-right text-xs leading-relaxed">
+            <div className="max-w-[460px] hidden min-[991px]:block min-[1368px]:max-w-[260px] text-right text-xs leading-relaxed">
               <p className="font-medium text-white/90">
                 Founded on the timeless path of devotion
               </p>
               <p className="text-sm font-semibold">
                 Shree Krishna Bhakti Ashram
               </p>
+             <ul className="flex items-center gap-3 min-[1368px]:hidden mt-4">
+              {/* Email Block */}
+                <li className="secondary flex items-center">
+                  <a
+                    className="flex items-center gap-2 whitespace-nowrap font-bold text-[15px] text-[#fff] transition hover:text-[#244584]"
+                    href="mailto:skbhaktiashram@gmail.com"
+                  >
+                    <MdEmail className="shrink-0" />
+                    skbhaktiashram@gmail.com
+                  </a>
+                </li>
+
+                {/* Phone Block */}
+                <li className="secondary flex items-center">
+                  <a
+                    className="flex items-center gap-2 whitespace-nowrap font-bold text-[15px] text-[#fff] transition hover:text-[#244584]"
+                    href="tel:+919748088819"
+                  >
+                    <FaPhone className="shrink-0" />
+                    +91 9748088819
+                  </a>
+                </li>
+              </ul>
             </div>
 
             <img
               src="/assets/images/ashram-founder.png"
               alt="Ashram founder"
-              className="h-[105px] w-[115px] self-end object-contain object-bottom"
+              className="hidden min-[1050px]:block h-[105px] w-[115px] self-end object-contain object-bottom"
             />
           </div>
 
-          <button
+          {/* <button
             type="button"
             onClick={() => setSearchOpen(!searchOpen)}
             className="ml-auto text-[#fff] lg:hidden mbsearch"
             aria-label="Toggle search"
           >
             <Search size={21} />
-          </button>
+          </button> */}
 
           {/* Mobile menu button */}
           <button
@@ -160,7 +183,7 @@ export default function Header() {
                       <Link
                         key={child.href + child.label}
                         href={child.href}
-                        className="block px-5 py-3 text-sm text-gray-700 transition hover:bg-blue-50 hover:text-[#287fa0]"
+                        className="block px-5 py-3 text-sm text-black transition hover:bg-blue-50 hover:text-[#287fa0]"
                       >
                         {child.label}
                       </Link>
@@ -170,7 +193,7 @@ export default function Header() {
               </div>
             ))}
 
-            <button
+            {/* <button
               type="button"
               onClick={() => setSearchOpen(!searchOpen)}
               className="text-[#243c82] transition hover:text-[#2d83a5]"
@@ -178,7 +201,7 @@ export default function Header() {
               aria-expanded={searchOpen}
             >
               <Search size={20} />
-            </button>
+            </button> */}
           </nav>
 
              <ul className="hidden min-[1199px]:flex top-bar-nav nav navbar-nav navbar-right flex-wrap items-center gap-6">
@@ -186,7 +209,7 @@ export default function Header() {
   
 
   {/* Email Block */}
-  <li className="secondary flex items-center">
+  <li className="secondary hidden min-[1368px]:flex items-center">
     <a 
       className="flex font-bold items-center gap-2 text-[16px] text-[#4B4037] transition hover:text-[#B96B25]" 
       href="mailto:skbhaktiashram@gmail.com"
@@ -197,7 +220,7 @@ export default function Header() {
   </li>
 
   {/* Phone Block */}
-  <li className="secondary flex items-center">
+  <li className="secondary hidden min-[1368px]:flex items-center">
     <a 
       className="font-bold flex items-center gap-2 telnav text-[16px] text-[#4B4037] transition hover:text-[#B96B25]" 
       href="tel:+919748088819"
@@ -234,7 +257,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="flex-1 py-3.5 text-sm font-medium text-gray-700 hover:text-[#2d83a5]"
+                    className="flex-1 py-3.5 text-sm font-medium text-black hover:text-[#2d83a5]"
                   >
                     {item.label}
                   </Link>
@@ -245,7 +268,7 @@ export default function Header() {
                       onClick={() =>
                         setOpenMenu(openMenu === item.label ? "" : item.label)
                       }
-                      className="p-3 text-gray-600"
+                      className="p-3 text-black"
                       aria-label={`Toggle ${item.label} submenu`}
                       aria-expanded={openMenu === item.label}
                     >

@@ -487,7 +487,7 @@ useEffect(() => {
               </span>
             </h2>
 
-            {/* <p className="mt-5 max-w-xl text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
+            {/* <p className="mt-5 max-w-xl text-sm leading-7 text-black sm:text-base sm:leading-8">
               Discover comfortable accommodation for your spiritual journey.
               Choose your room category below and explore the available
               booking options for your stay.
@@ -567,7 +567,7 @@ useEffect(() => {
   </div>
 
   <div className="mb-0 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-    <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-600">
+    <p className="mt-5 max-w-3xl text-sm leading-7 text-black">
       {activeCategory.description}
     </p>
 
@@ -635,20 +635,20 @@ useEffect(() => {
 
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#102b35]/80 via-transparent to-black/10" />
 
-                  <span className="pointer-events-none absolute left-5 top-5 rounded-full border border-white/35 bg-white/15 px-4 py-2 text-[10px] font-semibold tracking-wider text-white backdrop-blur-md">
+                  {/* <span className="pointer-events-none absolute left-5 top-5 rounded-full border border-white/35 bg-white/15 px-4 py-2 text-[10px] font-semibold tracking-wider text-white backdrop-blur-md">
                     {room.detail}
-                  </span>
+                  </span> */}
                 </div>
 
                 {/* Room details */}
                 <div className="pt-5">
-                <div className="mb-1 flex flex-wrap items-center gap-2 text-xs text-gray-800">
-                  <Users size={15} className="text-gray-800" />
-                  {room.guests}
+                <div className="mb-1 flex flex-wrap items-center gap-2 text-xs text-black">
+                  {/* <Users size={15} className="text-black" />
+                  {room.guests} */}
 
-                  <span className="mx-1 text-gray-800">|</span>
+                  <span className="mx-1 text-black">|</span>
 
-                  <BedDouble size={15} className="text-gray-800" />
+                  <BedDouble size={15} className="text-black" />
 
                       {activeCategory.id === "super-deluxe"
                     ? "Super Deluxe"

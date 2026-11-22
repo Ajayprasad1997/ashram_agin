@@ -147,10 +147,10 @@ export default function AboutAshram() {
     </h2>
 
     {/* INTRODUCTION */}
-    <div className="mt-6 space-y-4 text-sm leading-7 text-gray-600">
+    <div className="mt-6 space-y-4 text-sm leading-7 text-black">
 
       <p
-        className="font-semibold text-gray-800"
+        className="font-semibold text-black"
         data-aos="fade-up"
         data-aos-delay="200"
       >
@@ -158,7 +158,7 @@ export default function AboutAshram() {
         retreat rooted in years of quiet devotion and family tradition.
       </p>
 
-      <p className="font-semibold text-gray-800"
+      <p className="font-semibold text-black"
         data-aos="fade-up"
         data-aos-delay="300"
       >
@@ -167,7 +167,7 @@ export default function AboutAshram() {
         serenity, and spiritual atmosphere.
       </p>
 
-      <p className="font-semibold text-gray-800"
+      <p className="font-semibold text-black"
         data-aos="fade-up"
         data-aos-delay="400"
       >
@@ -273,7 +273,7 @@ export default function AboutAshram() {
             </p>
           </div>
 
-          <div className="space-y-5 text-sm leading-8 text-gray-600 sm:text-base">
+          <div className="space-y-5 text-sm leading-8 text-black sm:text-base">
 
             {aboutParagraphs.map((paragraph, index) => (
               <p key={index}>
@@ -298,7 +298,7 @@ export default function AboutAshram() {
             <button
               type="button"
               onClick={() => setIsAboutModalOpen(false)}
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-gray-300 px-7 text-xs font-bold uppercase tracking-wide text-gray-600 transition hover:bg-gray-100"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-gray-300 px-7 text-xs font-bold uppercase tracking-wide text-black transition hover:bg-gray-100"
             >
               Close
             </button>

@@ -918,7 +918,7 @@ export default function Testimonials() {
                     {"★".repeat(review.rating)}
                   </div>
 
-                  <p className="mt-3 text-sm leading-7 text-gray-600">
+                  <p className="mt-3 text-sm leading-7 text-black">
                     {review.review}
                   </p>
 

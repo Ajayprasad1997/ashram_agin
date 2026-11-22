@@ -175,14 +175,14 @@ function SeasonCard({
 
             <div className="text-center text-[10px] font-extrabold uppercase tracking-wider text-[#244584] sm:text-xs">
               <span className="block">Single</span>
-              <span className="mt-1 block text-[9px] text-[#737F91]">
+              <span className="mt-1 block text-[9px] text-black">
                 Occupancy
               </span>
             </div>
 
             <div className="text-center text-[10px] font-extrabold uppercase tracking-wider text-[#244584] sm:text-xs">
               <span className="block">Double</span>
-              <span className="mt-1 block text-[9px] text-[#737F91]">
+              <span className="mt-1 block text-[9px] text-black">
                 Occupancy
               </span>
             </div>
@@ -219,7 +219,7 @@ function SeasonCard({
         {/* CARD FOOTER */}
 
         <div className="mt-5 flex items-center justify-between gap-3 rounded-lg bg-[#F5F7FB] px-4 py-3">
-          <div className="flex items-center gap-2 text-xs font-semibold text-[#737F91]">
+          <div className="flex items-center gap-2 text-xs font-semibold text-black">
             <Clock size={16} className="shrink-0 text-[#FFB900]" />
             Per Room / Night
           </div>
@@ -270,7 +270,7 @@ export default function PricingPage() {
           01. PRICING HERO BANNER
       ===================================== */}
 
-      <section className="relative flex min-h-[390px] items-center overflow-hidden pt-[90px] sm:pt-0 md:min-h-[440px]">
+      <section className="relative flex min-h-[390px] items-center overflow-hidden pt-[90px] min-[640px]:max-[1023px]:pt-[113px] min-[1024px]:pt-0 md:min-h-[440px]">
 
         {/* BACKGROUND IMAGE */}
 
@@ -302,13 +302,13 @@ export default function PricingPage() {
             </div>
 
             <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-[46px]">
-              Room Tariffs &
+              Room Occupancy 
               <span className="block text-[#FFB900]">
-                Seasonal Pricing
+                Charges
               </span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-sm leading-8 text-white/85 sm:text-base">
+            <p className="mt-3 md:mt-5 max-w-xl text-sm leading-8 text-white/85 sm:text-base">
               Discover our seasonal room rates and choose the perfect
               accommodation for your peaceful stay in the divine city
               of Vrindavan.
@@ -318,7 +318,7 @@ export default function PricingPage() {
 
             {/* BREADCRUMB */}
 
-            <div className="mt-8 flex items-center gap-3 text-sm text-white/75">
+            <div className="mt-3 md:mt-8 flex items-center gap-3 text-sm text-white/75">
 
               <Link href="/" className="transition hover:text-[#FFB900]">
                 Home
@@ -370,7 +370,7 @@ export default function PricingPage() {
             </span>
           </h2>
 
-          <p className="mt-5 text-sm leading-8 text-[#737F91] sm:text-base">
+          <p className="mt-5 text-sm leading-8 text-black sm:text-base">
             The following room tariffs are applicable according to
             the season and occupancy selected. All rates are quoted
             in Indian Rupees (INR) per room, per night.
@@ -395,7 +395,7 @@ export default function PricingPage() {
               <p className="text-[16px] font-extrabold text-[#244584]">
                 Single Occupancy
               </p>
-              <p className="mt-1 text-[15px] text-[#737F91]">
+              <p className="mt-1 text-[15px] text-black">
                 One guest
               </p>
             </div>
@@ -412,7 +412,7 @@ export default function PricingPage() {
               <p className="text-[16px] font-extrabold text-[#244584]">
                 Double Occupancy
               </p>
-              <p className="mt-1 text-[15px] text-[#737F91]">
+              <p className="mt-1 text-[15px] text-black">
                 Two guests
               </p>
             </div>
@@ -453,7 +453,7 @@ export default function PricingPage() {
               Our Room Price List
             </h2>
 
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[#737F91]">
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-black">
               Explore our accommodation prices across all three
               seasons and find the right room for your visit.
             </p>
@@ -620,7 +620,7 @@ export default function PricingPage() {
               Experience a Peaceful Stay
             </h2>
 
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[#737F91]">
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-black">
               Enjoy comfort, devotion and warm hospitality at Shree
               Krishna Bhakti Ashram. Get in touch with us for your
               accommodation enquiries.

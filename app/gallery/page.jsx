@@ -34,9 +34,9 @@ const galleryCategories = [
       "Ashram Garden",
       "Reception",
       "Temple Area",
-      "Ashram Outside Area",
-      "Ashram Inside Area",
-      "Ashram Premises",
+      "Hall for Events and Prayer",
+      "Outside Temple and Hall",
+      "Ashram Overview",
       "Garden & Open Space",
       "Ashram View",
     ],
@@ -90,27 +90,26 @@ const galleryCategories = [
     id: "guests",
     label: "Guest Pictures",
     images: [
+      "/assets/images/guests/1.jpg",
       "/assets/images/gl1.jpg",
       "/assets/images/gl2.jpg",
-      "/assets/images/gl3.jpg",
-      "/assets/images/gl4.jpg",
-      "/assets/images/guests/1.jpg",
-      "/assets/images/guests/2.jpg",
-      "/assets/images/guests/3.jpg",
-      "/assets/images/guests/4.jpg",
       "/assets/images/guests/5.jpg",
+      "/assets/images/guests/4.jpg",
+      "/assets/images/gl4.jpg",    
+      "/assets/images/gl3.jpg",        
+      "/assets/images/guests/2.jpg",
+                
       
     ],
     captions: [
-      "",
-      "Chilling Outside",
-      "Holi",
-      "Holi",
-      "Chilling Outside",
-      "A Happy Morning",
-      "Bonfire",
-      "Chilling Outside",
-      "Guest",
+      "Enjoying a peaceful conversation at the Ashram.",
+      "A memorable moment with our international guests.",
+      "A joyful group photograph at the Ashram entrance.",
+      "Giving our guests a warm and traditional welcome.",
+      "Guests enjoying leisurely moments with our team.",
+      "Beautiful Holi memories with our guests.",
+      "Cherished moments of Holi celebrations.",
+      "A special moment with our guests.",
       
     ],
   },
@@ -157,13 +156,11 @@ const galleryCategories = [
     images: [
        "/assets/images/ac2.jpg",
       "/assets/images/activitie1.jpg",
-      "/assets/images/food.jpg",
       "/assets/images/bhajan.jpg",
     ],
     captions: [
-      "Distributing Religious Material",
-      "Offering/Sacrament",
-      "Religious Material",
+      "Distributing Fruits",
+      "Distributing Food",      
       "Bhagwat Katha",
     ],
   },
@@ -588,7 +585,7 @@ function GalleryCarousel({ category, onImageClick }) {
               comfortable rooms, and spiritual experiences at our Ashram.
             </p>
 
-            <div className="mt-8 flex items-center gap-3 text-sm text-white/80">
+            <div className="mt-3 md:mt-8 flex items-center gap-3 text-sm text-white/80">
               <Link href="/" className="transition hover:text-[#FFB900]">
                 Home
               </Link>
@@ -618,7 +615,7 @@ function GalleryCarousel({ category, onImageClick }) {
             Explore Our Ashram
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-[#647084] md:text-base">
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-black md:text-base">
             Take a visual journey through our Ashram, from welcoming
             accommodation and beautiful surroundings to temple life,
             religious celebrations, and memorable guest experiences.

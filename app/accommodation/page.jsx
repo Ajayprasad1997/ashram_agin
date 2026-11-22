@@ -38,7 +38,7 @@ const roomSections = [
     facilities: [
       { icon: BedDouble, name: "Spacious Bedroom" },
       { icon: Utensils, name: "Kitchen Area" },
-      { icon: Bath, name: "Bathroom" },
+      { icon: Bath, name: "Attached Bathroom" },
       { icon: Building2, name: "Comfortable Room Interior" },
       { icon: DoorOpen, name: "Peaceful Room Outlook" },
     ],
@@ -142,10 +142,11 @@ const roomSections = [
     title: "Premium Room",
     subtitle: "AVAILABLE ON BOOKING PLATFORMS",
     description:
-      "Discover our Premium Room options available through selected booking platforms. Enjoy a peaceful atmosphere, thoughtfully arranged interiors and comfortable bedroom spaces at Shree Krishna Bhakti Ashram. Choose a suitable booking option for your visit to Vrindavan.",
+      "Enjoy a peaceful atmosphere, thoughtfully arranged interiors and comfortable bedroom spaces at Shree Krishna Bhakti Ashram. Choose a suitable booking option for your visit to Vrindavan.",
 
     facilities: [
       { icon: BedDouble, name: "Comfortable Bedroom" },
+      { icon: Bath, name: "Attached Bathroom" },
       { icon: Armchair, name: "Seating Area" },
       { icon: Building2, name: "Room Interiors" },
     ],
@@ -154,29 +155,35 @@ const roomSections = [
       {
         src: "assets/images/dr/4.jpg",
         alt: "Premium room",
-        caption: "Premium Room",
+        caption: "Premium Room 1",
       },
       {
-        src: "assets/images/dr/5.jpg",
+        src: "/assets/images/deluxe-booking-sites/pr1-1.jpg",
         alt: "Premium room interior",
-        caption: "Room Interior",
-      },
-       {
-        src: "assets/images/dr/3.jpg",
-        alt: "Premium room facilities",
-        caption: "Room Facilities",
-      },
+        caption: "Premium Room 1",
+      },       
       {
         src: "assets/images/dr/2.jpg",
-        alt: "Premium room seating area",
-        caption: "Comfortable Seating Area",
+        alt: "Premium Room 2",
+        caption: "Premium Room 2",
       },
      
       {
         src: "assets/images/dr/1.jpg",
-        alt: "Premium double bedroom",
-        caption: "Double Bedroom",
+        alt: "Premium Room 2",
+        caption: "Premium Room 2",
       },
+      {
+        src: "assets/images/dr/3.jpg",
+        alt: "Premium Room 3",
+        caption: "Premium Room 3",
+      },
+      {
+        src: "/assets/images/deluxe-booking-sites/pr3-1.jpg",
+        alt: "Premium Room 3",
+        caption: "Premium Room 3",
+      },
+      
     ],
   },
 ];
@@ -196,10 +203,11 @@ const facilities = [
   "Attached private bathrooms, comfortable seating areas, wardrobes, and dressing areas in selected rooms.",
   "Selected rooms include a compact kitchen and mini refrigerator.",
   "Garden views, open spaces, and outdoor sitting areas.",
+  "We have car parking space.",
   "The Ashram also has a goshala (cow shelter), prayer rooms, a drinking-water facility (piyau), and provisions for anna khetra and satsang.",
   "Being a ground-floor property, it is also suitable for elderly guests.",
   "Spacious hall and garden adjacent to the temple, ideal for religious ceremonies and social functions.",
-  "Driver's accommodation can be provided at an additional charge.",
+  "Driver's accommodation can be provided at an additional charge.",  
   "24/7 power backup for uninterrupted convenience.",
 ];
 
@@ -375,7 +383,7 @@ useEffect(() => {
 
       {/* ================= PAGE BANNER ================= */}
 
-      <section className="pt-[90px] sm:pt-0 relative flex min-h-[410px] items-center overflow-hidden md:min-h-[460px]">
+      <section className="relative flex min-h-[390px] items-center overflow-hidden pt-[90px] min-[640px]:max-[1023px]:pt-[113px] min-[1024px]:pt-0 md:min-h-[440px]">
 
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[7000ms] hover:scale-105"
@@ -409,7 +417,7 @@ useEffect(() => {
               a memorable stay in Vrindavan.
             </p>
 
-            <div className="mt-8 flex items-center gap-3 text-sm text-white/80">
+            <div className="mt-3 md:mt-8 flex items-center gap-3 text-sm text-white/80">
               <Link href="/" className="transition hover:text-[#fdbb00]">
                 Home
               </Link>
@@ -446,7 +454,7 @@ useEffect(() => {
             <span className="text-[#fdbb00]"> Heart of Vrindavan</span>
           </h2>
 
-          <p className="mt-5 text-sm leading-8 text-gray-600 sm:text-base">
+          <p className="mt-5 text-sm leading-8 text-black sm:text-base">
             At Shree Krishna Bhakti Ashram, we offer a peaceful
             environment where comfort meets spirituality.
             Choose from our accommodation options and enjoy
@@ -523,7 +531,7 @@ useEffect(() => {
 
           {/* DESCRIPTION */}
 
-          <p className="mt-4 text-[13px] leading-[1.9] text-gray-600">
+          <p className="mt-4 text-[13px] leading-[1.9] text-black">
             {section.description}
           </p>
 
@@ -556,7 +564,7 @@ useEffect(() => {
 
                     </div>
 
-                    <span className="pt-1 text-[12px] font-medium leading-relaxed text-gray-700">
+                    <span className="pt-1 text-[12px] font-medium leading-relaxed text-black">
                       {facility.name}
                     </span>
 
@@ -593,7 +601,7 @@ useEffect(() => {
 
           {/* HOVER CAPTION */}
 
-          <div className="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-between bg-[#244584] px-5 py-4 transition-transform duration-500 ease-out group-hover:translate-y-0">
+          <div className="absolute inset-x-0 bottom-0 flex translate-y-0 items-center justify-between bg-[#244584] px-5 py-4 opacity-100 transition-all duration-500 ease-out">
 
             <div className="flex items-center gap-3">
 
@@ -647,7 +655,7 @@ useEffect(() => {
 
             {/* HOVER CAPTION */}
 
-            <div className="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-between bg-[#244584] px-3 py-3 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:px-4 sm:py-4">
+            <div className="absolute inset-x-0 bottom-0 flex translate-y-0 items-center justify-between bg-[#244584] px-5 py-4 opacity-100 transition-all duration-500 ease-out">
 
               <div className="flex min-w-0 items-center gap-2">
 
@@ -753,7 +761,7 @@ useEffect(() => {
             <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-sm font-medium text-white">
               {roomSections[lightbox.sectionIndex].title}
               {" — "}
-              {lightbox.imageIndex + 1} /{" "}
+              {lightbox.caption} /{" "}
               {roomSections[lightbox.sectionIndex].images.length}
             </div>
 
@@ -796,7 +804,7 @@ useEffect(() => {
               </span>
             </h2>
 
-            <p className="mt-5 text-sm leading-8 text-gray-600 sm:text-base">
+            <p className="mt-5 text-sm leading-8 text-black sm:text-base">
              The Ashram does not provide regular meal service. Guests staying in Super Deluxe Rooms are welcome to use the kitchenette to prepare their own meals; basic utensils are provided. Several eateries just outside the Ashram serve homely food at reasonable prices. For larger gatherings and events, a separate kitchen space is available for a Maharaj or chef to prepare meals.
             </p>
 

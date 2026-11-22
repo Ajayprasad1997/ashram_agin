@@ -95,7 +95,7 @@ export default function EventsPage() {
     <main className="overflow-hidden bg-[#F5F7FB] text-[#14233F]">
 
       {/* HERO BANNER */}
-      <section className="pt-[90px] sm:pt-0 relative flex min-h-[410px] items-center overflow-hidden md:min-h-[480px]">
+      <section className="relative flex min-h-[390px] items-center overflow-hidden pt-[90px] min-[640px]:max-[1023px]:pt-[113px] min-[1024px]:pt-0 md:min-h-[440px]">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[7000ms] hover:scale-105"
           style={{
@@ -125,7 +125,7 @@ export default function EventsPage() {
               of the spiritual life at our Ashram.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-white/80">
+            <div className="mt-3 md:mt-8 flex flex-wrap items-center gap-3 text-sm text-white/80">
               <Link href="/" className="transition hover:text-[#FFB900]">
                 Home
               </Link>
@@ -159,7 +159,7 @@ export default function EventsPage() {
               </span>
             </h2>
 
-            <p className="mt-6 text-base leading-8 text-[#647084]">
+            <p className="mt-6 text-base leading-8 text-black">
               Guests are welcome to participate in the Ashram's daily
               activities. From peaceful morning prayers to evening
               devotion and acts of service, every moment offers an
@@ -174,7 +174,7 @@ export default function EventsPage() {
                 <h3 className="font-bold text-[#14233F]">
                   Devotion Through Service
                 </h3>
-                <p className="mt-1 text-sm text-[#647084]">
+                <p className="mt-1 text-sm text-black">
                   Participate, connect, and experience the spirit of seva.
                 </p>
               </div>
@@ -220,7 +220,7 @@ export default function EventsPage() {
         Events & <span className="text-[#244584]">Venue Hire</span>
       </h2>
 
-      <p className="mt-6 text-base leading-8 text-[#647084]">
+      <p className="mt-6 text-base leading-8 text-black">
         Looking for a peaceful and distinctive venue for a wedding,
         Bhagwat, religious ceremony or family gathering? Shree Krishna
         Bhakti Ashram offers its temple and garden spaces for private
@@ -254,7 +254,7 @@ export default function EventsPage() {
           Temple Area
         </h3>
 
-        <p className="mt-4 text-sm leading-8 text-[#647084]">
+        <p className="mt-4 text-sm leading-8 text-black">
           The enclosed temple area can be considered for religious
           ceremonies, Bhagwat programmes, devotional gatherings,
           weddings and other suitable private occasions. Its spiritual
@@ -291,7 +291,7 @@ export default function EventsPage() {
           Open Garden Area
         </h3>
 
-        <p className="mt-4 text-sm leading-8 text-[#647084]">
+        <p className="mt-4 text-sm leading-8 text-black">
           The Ashram's open garden area offers an outdoor setting for
           suitable celebrations, family functions, religious gatherings
           and social occasions. Clients can enquire about using this
@@ -388,7 +388,7 @@ export default function EventsPage() {
           Dedicated Food Preparation Area
         </h3>
 
-        <p className="mt-5 text-sm leading-8 text-[#647084]">
+        <p className="mt-5 text-sm leading-8 text-black">
           The Ashram has a dedicated area where food can be prepared
           within the premises. This facility can support event-related
           food arrangements for gatherings, religious programmes,
@@ -405,7 +405,7 @@ export default function EventsPage() {
               <h4 className="font-bold text-[#14233F]">
                 On-site Food Preparation
               </h4>
-              <p className="mt-1 text-sm leading-7 text-[#647084]">
+              <p className="mt-1 text-sm leading-7 text-black">
                 Food preparation can be arranged within the Ashram,
                 subject to prior discussion and agreed arrangements.
               </p>
@@ -420,7 +420,7 @@ export default function EventsPage() {
               <h4 className="font-bold text-[#14233F]">
                 Event Food Requirements
               </h4>
-              <p className="mt-1 text-sm leading-7 text-[#647084]">
+              <p className="mt-1 text-sm leading-7 text-black">
                 Discuss your expected guest numbers, menu and food
                 service requirements with the Ashram family in advance.
               </p>
@@ -451,7 +451,7 @@ export default function EventsPage() {
             A Setting for Meaningful Gatherings
           </h3>
 
-          <p className="mt-4 text-sm leading-8 text-[#647084]">
+          <p className="mt-4 text-sm leading-8 text-black">
             Whether you are planning a religious celebration or a
             private family occasion, contact the Ashram to discuss
             the spaces, accommodation and arrangements that may
@@ -493,7 +493,7 @@ export default function EventsPage() {
           Discuss Your Event Requirements
         </h4>
 
-        <p className="mt-3 text-sm leading-8 text-[#647084]">
+        <p className="mt-3 text-sm leading-8 text-black">
           Event organisers can discuss venue availability, guest
           accommodation, additional beds, food preparation, seating,
           decorations, timings, pricing and any other arrangements
@@ -501,7 +501,7 @@ export default function EventsPage() {
           reviewed and agreed upon before confirming a booking.
         </p>
 
-        <p className="mt-3 text-sm leading-8 text-[#647084]">
+        <p className="mt-3 text-sm leading-8 text-black">
           Venue hire is offered on a paid basis. Charges, availability,
           permitted arrangements and the final scope of services will
           be discussed individually according to the nature and
@@ -624,7 +624,7 @@ export default function EventsPage() {
               Daily Activities
             </h2>
 
-            <p className="mt-5 leading-8 text-[#647084]">
+            <p className="mt-5 leading-8 text-black">
               Join us in our daily spiritual activities and experience
               moments of prayer, devotion, and selfless service.
             </p>
@@ -678,7 +678,7 @@ export default function EventsPage() {
                       {activity.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-7 text-[#647084]">
+                    <p className="mt-3 text-sm leading-7 text-black">
                       {activity.description}
                     </p>
 
@@ -710,7 +710,7 @@ export default function EventsPage() {
                 Spiritual Experiences
               </h2>
 
-              <p className="mt-4 max-w-xl leading-8 text-[#647084]">
+              <p className="mt-4 max-w-xl leading-8 text-black">
                 Guests can also inquire about other spiritual and religious
                 activities inside and outside the Ashram.
               </p>

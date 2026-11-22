@@ -41,7 +41,7 @@ export default function ContactSection() {
               You Have Questions,<br />We Have Answers
             </h2>
             
-            {/* <p className="mt-6 max-w-md text-xs font-light leading-6 tracking-wide text-gray-800">
+            {/* <p className="mt-6 max-w-md text-xs font-light leading-6 tracking-wide text-black">
               Discover experiences you won't find anywhere else—thoughtfully designed to immerse you in the heart of the destination. Soulful stories waiting to be lived.
             </p> */}
 
@@ -123,7 +123,7 @@ export default function ContactSection() {
               onSubmit={handleSubmit}
               className="w-full bg-[#fdfcfb] p-6 text-black shadow-2xl rounded-sm sm:p-10"
             >
-              <h3 className="text-xl font-medium tracking-wide text-gray-900">Tell Us What You Need</h3>
+              <h3 className="text-xl font-medium tracking-wide text-black">Tell Us What You Need</h3>
               <p className="mt-1 text-xs text-black font-light">Our team is ready to assist you with every detail, big or small.</p>
 
               {/* Input elements split wrapper block */}

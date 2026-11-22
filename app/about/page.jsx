@@ -184,10 +184,10 @@ function AboutThreeColumnSection() {
           </h2>
 
           {/* INTRODUCTION */}
-          <div className="mt-6 space-y-4 text-sm leading-7 text-gray-800">
+          <div className="mt-6 space-y-4 text-sm leading-7 text-black">
 
             <p
-              className="font-semibold text-gray-800"
+              className="font-semibold text-black"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -195,7 +195,7 @@ function AboutThreeColumnSection() {
               retreat rooted in years of quiet devotion and family tradition.
             </p>
 
-            <p className="font-semibold text-gray-800"
+            <p className="font-semibold text-black"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -204,7 +204,7 @@ function AboutThreeColumnSection() {
               serenity, and spiritual atmosphere.
             </p>
 
-            <p className="font-semibold text-gray-800"
+            <p className="font-semibold text-black"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -303,7 +303,7 @@ function AboutThreeColumnSection() {
             </p>
           </div>
 
-          <div className="space-y-5 text-sm leading-8 text-gray-600 sm:text-base">
+          <div className="space-y-5 text-sm leading-8 text-black sm:text-base">
 
             {aboutUsParagraphs.map((paragraph, index) => (
               <p key={index}>
@@ -328,7 +328,7 @@ function AboutThreeColumnSection() {
             <button
               type="button"
               onClick={() => setIsAboutModalOpen(false)}
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-gray-300 px-7 text-xs font-bold uppercase tracking-wide text-gray-600 transition hover:bg-gray-100"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-gray-300 px-7 text-xs font-bold uppercase tracking-wide text-black transition hover:bg-gray-100"
             >
               Close
             </button>
@@ -410,7 +410,7 @@ function AboutThreeColumnSection() {
               Authentic Culture and Charm, Where Beauty Knows No Bounds
             </h3>
 
-            <p className="mt-4 text-[15px] leading-8 text-gray-800">
+            <p className="mt-4 text-[15px] leading-8 text-black">
               The property offers a serene atmosphere, spacious
               rooms, a well-maintained garden, and a temple within
               the premises.
@@ -769,7 +769,7 @@ function FacilitiesArcShowcaseSection({ facilities = [] }) {
           For a Peaceful Stay
         </p>
 
-        <p className="mx-auto mt-5 max-w-md text-sm leading-8 text-[#737F91]">
+        <p className="mx-auto mt-5 max-w-md text-sm leading-8 text-black">
           Thoughtfully arranged facilities and comfortable spaces make your
           stay peaceful, convenient and spiritually enriching.
         </p>
@@ -855,14 +855,15 @@ const facilities = [
 // ==========================================
 
 const attractions = [
-  { name: "Radharaman Temple", distance: "Nearby" },
-  { name: "Keli Kunj", distance: "Nearby" },
+  
   { name: "Shri Banke Bihari Temple", distance: "1 km" },
   { name: "Radha Ballabh Mandir", distance: "1 km" },
-  { name: "ISKCON Temple", distance: "0.75 km" },
-  { name: "Prem Mandir", distance: "Nearby" },
+  { name: "ISKCON Temple", distance: "0.75 km" },  
+  { name: "Prem Mandir", distance: "Nearby" },  
   { name: "Nidhivan", distance: "Nearby" },
   { name: "Shri Rangji Mandir", distance: "Nearby" },
+  { name: "Radharaman Temple", distance: "Nearby" },
+  { name: "Keli Kunj", distance: "Nearby" },
   { name: "Neem Karori Baba Ashram", distance: "Nearby" },
   { name: "Jugal Kishore Temple", distance: "Nearby" },
 ];
@@ -923,7 +924,7 @@ export default function AboutPage() {
           01. ABOUT HERO SECTION
       ===================================== */}
 
-      <section className="pt-[90px] sm:pt-0 relative flex min-h-[410px] items-center overflow-hidden md:min-h-[440px]">
+      <section className="relative flex min-h-[390px] items-center overflow-hidden pt-[90px] min-[640px]:max-[1023px]:pt-[113px] min-[1024px]:pt-0 md:min-h-[440px]">
 
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[7000ms] hover:scale-105"
@@ -958,7 +959,7 @@ export default function AboutPage() {
               comfortable and memorable.
             </p>
 
-            <div className="mt-8 flex items-center gap-3 text-sm text-white/80">
+            <div className="mt-3 md:mt-8 flex items-center gap-3 text-sm text-white/80">
               <Link href="/" className="transition hover:text-[#FFB900]">
                 Home
               </Link>
@@ -1019,7 +1020,7 @@ export default function AboutPage() {
                 </div>
 
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#737F91]">
+                  <p className="text-xs font-bold uppercase tracking-wider text-black">
                     Our Location
                   </p>
 
@@ -1049,13 +1050,13 @@ export default function AboutPage() {
               </span>
             </h2>
 
-            <p className="mt-7 text-sm leading-8 text-[#737F91]">
+            <p className="mt-7 text-sm leading-8 text-black">
               Centrally located in Vrindavan, the Ashram
               provides convenient access to major temples
               and important religious destinations.
             </p>
 
-            <p className="mt-4 text-sm leading-8 text-[#737F91]">
+            <p className="mt-4 text-sm leading-8 text-black">
               Restaurants, ATMs, banks, grocery stores and
               local shops are available nearby. Rickshaws
               and other local transportation options help
@@ -1123,7 +1124,7 @@ export default function AboutPage() {
                 </span>
               </h2>
 
-              <p className="mt-6 text-sm leading-8 text-[#737F91]">
+              <p className="mt-6 text-sm leading-8 text-black">
                 Guests are welcome to participate in the
                 Ashram's daily activities, including morning
                 prayers, evening prayers and food distribution.
@@ -1163,7 +1164,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-[#737F91]">
+                <p className="text-xs font-bold uppercase tracking-wider text-black">
                   Ashram Timings
                 </p>
 
@@ -1199,7 +1200,7 @@ export default function AboutPage() {
                       {activity.title}
                     </h3>
 
-                    <p className="mt-3 max-w-md text-sm leading-7 text-[#737F91]">
+                    <p className="mt-3 max-w-md text-sm leading-7 text-black">
                       {activity.description}
                     </p>
 
@@ -1218,7 +1219,7 @@ export default function AboutPage() {
                   className="mt-1 shrink-0 text-[#FFB900]"
                 />
 
-                <p className="text-sm leading-7 text-[#737F91]">
+                <p className="text-sm leading-7 text-black">
                   Guests can also inquire about other spiritual
                   and religious activities taking place inside
                   and outside the Ashram.
@@ -1257,25 +1258,25 @@ export default function AboutPage() {
               </span>
             </h2>
 
-            <p className="mt-7 text-sm leading-8 text-[#737F91]">
+            <p className="mt-7 text-sm leading-8 text-black">
               The family emphasizes devotion, sincere service
               and personal care for guests, creating a welcoming
               atmosphere throughout their stay.
             </p>
 
-            <p className="mt-5 text-sm leading-8 text-[#737F91]">
+            <p className="mt-5 text-sm leading-8 text-black">
               Caretakers can assist with information about
               Vrindavan's religious sites and help arrange local
               transportation, subject to availability.
             </p>
 
-            <p className="mt-5 text-sm leading-8 text-[#737F91]">
+            <p className="mt-5 text-sm leading-8 text-black">
               Guests can receive guidance about significant
               places associated with the lives of Shri Radha
               and Krishna.
             </p>
 
-            <p className="mt-5 text-sm leading-8 text-[#737F91]">
+            <p className="mt-5 text-sm leading-8 text-black">
               Restaurants nearby offer dining options, and
               some provide food delivery to the Ashram.
             </p>
@@ -1291,7 +1292,7 @@ export default function AboutPage() {
                   Serving with Love
                 </h3>
 
-                <p className="mt-1 text-sm text-[#737F91]">
+                <p className="mt-1 text-sm text-black">
                   Devotion, sincere service and personal care.
                 </p>
               </div>
@@ -1323,7 +1324,7 @@ export default function AboutPage() {
                     Feel at Home
                   </p>
 
-                  <p className="mt-1 text-xs text-[#737F91]">
+                  <p className="mt-1 text-xs text-black">
                     Your stay in Vrindavan
                   </p>
                 </div>

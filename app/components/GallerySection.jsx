@@ -241,7 +241,7 @@ useEffect(() => {
               Nearby Places
               <span className="h-px w-6 bg-gray-300" />
             </div>
-            <h2 className="mt-4 font-serif text-3xl font-bold uppercase tracking-widest text-gray-900 sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 font-serif text-3xl font-bold uppercase tracking-widest text-black sm:text-4xl lg:text-5xl">
               Our Gallery
             </h2>
             <p className="mt-6 max-w-xs text-[12px] font-light leading-6 tracking-wide text-gray-500">
