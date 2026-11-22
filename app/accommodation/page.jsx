@@ -40,7 +40,7 @@ const roomSections = [
       { icon: Utensils, name: "Kitchen Area" },
       { icon: Bath, name: "Attached Bathroom" },
       { icon: Building2, name: "Comfortable Room Interior" },
-      { icon: DoorOpen, name: "Peaceful Room Outlook" },
+      { icon: DoorOpen, name: "Private Balcony " },
     ],
 
     images: [
